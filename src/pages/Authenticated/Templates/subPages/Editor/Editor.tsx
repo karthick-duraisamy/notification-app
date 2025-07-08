@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import EmailEditor from 'editor';
+// import EmailEditor from 'editor';
 import { Button, Spin, Col, Input, message, Modal, Row, Select, Switch, Tag, Tooltip } from 'antd';
 import styled from 'styled-components';
 import { useAppDispatch, useAppSelector } from '../../../../../hooks/App.hook';
@@ -757,13 +757,13 @@ const Editor = () => {
         <>
           <PreviewModal />
           <></>
-          <EmailEditor
+          {/* <EmailEditor
             ref={ref}
             preview={false}
             showUndoRedo={false}
             variables={variable}
             cascader={cascader as any}
-          />{' '}
+          />{' '} */}
         </>
       ) : (id === 'new' && active.templateType === 'J') ||
         ((serviceGetTemplateStatus as any)?.data?.response as any)?.data?.type === 'J' ||

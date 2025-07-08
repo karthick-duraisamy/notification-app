@@ -16,7 +16,6 @@
     "antd": "^5.25.3",
     "axios": "^1.9.0",
     "crypto-js": "^4.2.0",
-    "editor": "http://karthick.d:Infiniti%40123@192.168.1.140:3000/INFINITI/dnde.git#55b67e649bf386643f67e45eaff6764766e36e4a",
     "firebase": "^11.9.1",
     "i18next": "^25.2.1",
     "i18next-http-backend": "^3.0.2",
