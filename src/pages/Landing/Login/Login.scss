@@ -1,0 +1,149 @@
+.Login {
+  .cls-login-pwd {
+    .ant-form-item-control {
+      .ant-form-item-control-input {
+        .ant-form-item-control-input-content {
+          input {
+            background-color: var(--theme-login-input-text);
+            color: var(--theme-login-input-text-color);
+          }
+        }
+      }
+    }
+    .ant-input-outlined.ant-input-status-error:not(.ant-input-disabled) {
+      background-color: var(--theme-login-input-text);
+    }
+    input {
+      &::placeholder {
+        color: var(--theme-login-input-text-color);
+      }
+    }
+  }
+
+  .ant-form-item-label {
+    .ant-form-item-required {
+      color: var(--label-color);
+    }
+  }
+
+  .cls-login-label {
+    .ant-input-affix-wrapper {
+      background-color: var(--theme-login-input-text) !important;
+      border-color: var(--theme-login-input-text-border);
+      &:focus-within {
+        background-color: unset;
+      }
+      input {
+        background-color: var(--theme-login-input-text);
+        color: var(--theme-login-input-text-color);
+        &::placeholder {
+          color: var(--theme-login-input-text-color);
+        }
+      }
+    }
+  }
+
+  .ant-input-affix-wrapper-status-error {
+    background-color: var(--theme-login-input-text) !important;
+  }
+
+  .cls-login-psw-section,
+  .ant-select-selector,
+  .ant-input-affix-wrapper {
+    background-color: var(--theme-login-input-text);
+    border-color: var(--theme-login-input-text-border) !important;
+
+    input:-webkit-autofill {
+      background-color: var(--theme-login-input-text) !important;
+      color: var(--theme-login-input-text-color) !important;
+    }
+
+    .ant-input-suffix {
+      span {
+        svg path {
+          fill: var(--theme-login-input-text-color);
+        }
+      }
+    }
+  }
+
+  .ant-select-selector {
+    border-radius: 8px !important;
+    height: 42px !important;
+    padding-top: 6px !important;
+  }
+
+  .cls-login-label {
+    .ant-form-item-label {
+      label {
+        color: var(--theme-login-input-text-color) !important;
+      }
+    }
+  }
+
+  .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: var(--theme-login-input-text) !important;
+    color: var(--theme-login-input-text-color) !important;
+  }
+
+  .ant-checkbox-wrapper {
+    color: var(--theme-login-input-text-color);
+    font-size: 14px !important;
+    font-weight: normal !important;
+
+    @media (min-width: 320px) and (max-width: 1200px) {
+      width: max-content;
+    }
+  }
+
+  .ant-input-affix-wrapper .link span {
+    color: var(--link-color);
+    font-size: 13px !important;
+    font-weight: normal !important;
+  }
+
+  .remember {
+    margin-top: 7px;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--check-box-color);
+    border-color: var(--check-box-color);
+  }
+
+  .ant-checkbox-checked:after,
+  .ant-checkbox-input:focus + .ant-checkbox-inner,
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner {
+    border-color: var(--check-box-color);
+  }
+
+  .ant-checkbox-inner:after {
+    top: 45%;
+  }
+
+  .forgot {
+    .ant-btn-link {
+      color: var(--theme-login-input-text-color);
+
+      span {
+        font-size: 14px;
+        font-weight: normal !important;
+      }
+    }
+  }
+
+  .cls-remember-ele {
+    .ant-checkbox + span {
+      padding-right: 0px;
+    }
+  }
+
+  // .cls-login-btn {
+  //   .ant-btn-primary {
+  //     background-color: #fd9646;
+  //     border: none;
+  //     color: #fff;
+  //   }
+  // }
+}

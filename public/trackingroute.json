@@ -1,0 +1,146 @@
+[
+  {
+    "route_id": 2,
+    "path": "/templates/:tab/:view",
+    "layout": "HomeLayout",
+    "component": "Templates",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 3,
+    "path": "/editor/:id",
+    "layout": "TemplateLayout",
+    "component": "Editor",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 4,
+    "path": "/editor/:type/:id",
+    "layout": "TemplateLayout",
+    "component": "Editor",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 5,
+    "path": "/templates/htmleditor",
+    "layout": "HomeLayout",
+    "component": "HtmlEditor",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 6,
+    "path": "/project",
+    "layout": "HomeLayout",
+    "component": "Project",
+    "default": 0,
+    "permission": [
+      "email_api.ProjectViewSet.create",
+      "email_api.ProjectViewSet.delete",
+      "email_api.ProjectViewSet.list",
+      "email_api.ProjectViewSet.master_info_response",
+      "email_api.ProjectViewSet.retrieve",
+      "email_api.ProjectViewSet.status",
+      "email_api.ProjectViewSet.update"
+    ]
+  },
+  {
+    "route_id": 7,
+    "path": "/project/:action",
+    "layout": "HomeLayout",
+    "component": "ProjectForm",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 8,
+    "path": "/mailer",
+    "layout": "HomeLayout",
+    "component": "Mailer",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 9,
+    "path": "/mailer/:action/:id",
+    "layout": "HomeLayout",
+    "component": "MailerOperations",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 10,
+    "path": "/variables",
+    "layout": "HomeLayout",
+    "component": "Variables",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 11,
+    "path": "/variables/:action",
+    "layout": "HomeLayout",
+    "component": "VariablesForm",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 12,
+    "path": "/variables/:action/:id",
+    "layout": "HomeLayout",
+    "component": "VariablesForm",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 13,
+    "path": "/settings",
+    "layout": "HomeLayout",
+    "component": "Settings",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 14,
+    "path": "/settings/:action",
+    "layout": "HomeLayout",
+    "component": "SettingsForm",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 15,
+    "path": "/tracking",
+    "layout": "HomeLayout",
+    "component": "Tracking",
+    "default": 1,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 16,
+    "path": "/contacts",
+    "layout": "HomeLayout",
+    "component": "Contacts",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 17,
+    "path": "/contacts/:action/:id",
+    "layout": "HomeLayout",
+    "component": "ContactsForm",
+    "default": 0,
+    "permission": ["all"]
+  },
+  {
+    "route_id": 1,
+    "path": "/dashboard",
+    "layout": "HomeLayout",
+    "component": "Dashboard",
+    "default": 0,
+    "permission": ["all"]
+  }
+]

@@ -1,0 +1,100 @@
+.cls-step-campaign {
+  .ant-steps-item-icon>.ant-steps-icon {
+    color: blue !important;
+    border-color: blue !important;
+    font-size: 20px !important;
+  }
+
+  .ant-steps-item-icon .ant-steps-icon-dot {
+    background-color: blue !important;
+  }
+
+  .ant-steps-item-icon[role='img'] {
+    background-color: blue !important;
+  }
+
+  .ant-steps-item-icon .ant-steps-icon > .anticon > svg {
+    color: #00000073 !important;
+  }
+  .ant-steps-item-active .ant-steps-item-icon .ant-steps-icon > .anticon > svg, .ant-steps-item-finish .ant-steps-item-icon .ant-steps-icon > .anticon > svg {
+    color: #168aff !important;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon {
+    background-color: #fff;
+    border-color: #168aff !important;
+  }
+
+  .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+    color: #168aff;
+    font-weight: 600;
+  }
+
+  .ant-steps-item-process .ant-steps-item-icon {
+    background-color: #fff;
+    border-color: #168aff;
+  }
+
+  .ant-steps-item-process {
+    .ant-steps-icon {
+      color: #fff !important;
+    }
+  }
+
+  .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title:after {
+    background-color: #168aff;
+  }
+}
+
+.steps-action {
+  margin-top: 20px;
+}
+
+.ant-pagination {
+  text-align: right;
+}
+
+.cls-selected-fields {
+  border: 1px solid #f0f0f0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cls-form-fields-select {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  span {
+    border: 1px solid #168aff;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    &.cls-active {
+      border: 1px solid green;
+      color: green;
+    }
+  }
+}
+
+.cls-campaign-contact {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f5f8;
+  border: 1px dashed #555555;
+}
+
+.cls-back-button {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.cls-contact-header {
+  height: 35px;
+  margin-bottom: 0px;
+}

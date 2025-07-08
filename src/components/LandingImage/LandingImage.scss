@@ -1,0 +1,40 @@
+.LandingImage {
+    .login {
+        background: url('../../assets/images/Login.svg') no-repeat;
+        background-size: contain;
+        min-height: 360px;
+
+        @media (min-width:768px) and (max-width:1024px) {
+            background-size: 100% 100%;
+            min-height: 360px;
+        }
+    }
+
+    .forgot-password {
+        background: url('../../assets/images/Forgot-password.svg') no-repeat 20px;
+        background-size: contain;
+        min-height: 340px;
+        margin-top: 20px;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            min-height: 220px;
+            margin: 20px 0px;
+        }
+
+        @media (min-width:481px) and (max-width:767px) {
+            min-height: 300px;
+            margin: 20px 0px;
+        }
+
+        @media (min-width:767px) and (max-width:1024px) {
+            min-height: 230px;
+            margin: 20px 0px;
+        }
+    }
+
+    .reset-password {
+        background: url('../../assets/images/Reset-password.svg') no-repeat;
+        background-size: 520px;
+        min-height: 360px;
+    }
+}

@@ -1,0 +1,163 @@
+.cls-upload-file {
+  .ant-modal-content {
+    background-color: var(--theme-setting-form-background);
+
+    .ant-modal-body {
+      .ant-upload {
+        background-color: var(--theme-setting-from-container);
+
+        p {
+          color: var(--theme-login-input-text-color);
+        }
+      }
+    }
+
+    .ant-modal-footer {
+      .ant-btn-default {
+        background-color: var(--theme-login-input-text);
+        color: var(--theme-login-input-text-color);
+        border-color: var(--theme-select-border-color);
+      }
+    }
+  }
+}
+
+.cls-upload-btn {
+  background-color: var(--theme-login-input-text);
+  color: var(--theme-login-input-text-color);
+  border-color: var(--theme-select-border-color);
+}
+
+@media (min-width: 320px) and (max-width:480px),
+(min-width:481px) and (max-width:767px) {
+
+  .cls-contact {
+    row-gap: normal !important;
+
+    .cls-contact-detail {
+      padding: 5px;
+      font-size: 15px;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .cls-contact-add:nth-child(1) {
+    background: none;
+    border: none;
+  }
+
+  .cls-contact-add {
+    border: 1px solid #dbdcdc;
+    padding: 20px 0px 0px 10px;
+    border-radius: 8px;
+    margin: 0px 15px 15px 0px;
+  }
+
+  .cls-upload-btn {
+    margin-bottom: 20px;
+    padding: 5px 9px;
+  }
+
+  .ant-row-middle {
+    align-items: start;
+  }
+
+  .Contacts {
+
+    .cls-contacts,
+    .cls-contact-status,
+    .cls-contact-create,
+    .cls-contact-update {
+      display: none
+    }
+
+    .action {
+      width: 20% !important;
+    }
+
+    .cls-contact-name {
+      width: 40%;
+    }
+
+    .cls-contat-id {
+      width: 25%;
+    }
+
+    .popover {
+      width: 10%;
+    }
+  }
+}
+
+.cls-contact-create,
+.cls-contact-update {
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+@media (min-width:481px) and (max-width:767px) {
+  .cls-contact {
+    .cls-contact-detail {
+      font-size: 14px;
+      border-radius: unset;
+      width: auto;
+      height: auto;
+      padding: 5px 10px;
+
+      span:nth-child(2) {
+        display: inline !important;
+      }
+    }
+  }
+
+  .Contacts {
+
+    .cls-contact-status,
+    .cls-details:nth-child(1) {
+      display: block;
+    }
+
+    .cls-details:nth-child(2) {
+      display: none;
+    }
+
+    .action {
+      width: 15% !important;
+    }
+
+    .cls-contact-name {
+      width: 30%;
+    }
+
+    .cls-contat-id {
+      width: 20%;
+    }
+
+    .popover {
+      width: 10%;
+    }
+  }
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+
+  .cls-contact-update,
+  .cls-contact-create {
+    display: none;
+  }
+
+  .Contacts {
+    .ant-row-middle {
+      align-items: start;
+    }
+  }
+}

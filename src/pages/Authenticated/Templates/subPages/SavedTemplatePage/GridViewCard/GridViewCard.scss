@@ -1,0 +1,78 @@
+.GridViewCard {
+  background: var(--theme-header-background);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+
+  .flex-container {
+    button {
+      svg path {
+        fill: var(--theme-login-input-text-color);
+      }
+    }
+  }
+
+  .img {
+    background: #f2f2f2;
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    place-content: center;
+    overflow-x: hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    img {
+      max-width: 170%;
+    }
+  }
+
+  .last-updated {
+    color: #8a8787;
+  }
+
+  .cls-status {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      border-radius: 50%;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 7px;
+    }
+
+    &.Active {
+      color: #37c57a;
+
+      &::before {
+        background: #37c57a;
+        box-shadow: #37c57a4f 0px 0px 0px 3px;
+      }
+    }
+
+    &.Inactive {
+      color: #fd4646;
+
+      &::before {
+        background: #fd4646;
+        box-shadow: #fd464659 0px 0px 0px 3px;
+      }
+    }
+  }
+
+  h3 a {
+    color: inherit;
+  }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+  .GridViewCard {
+    margin-right: 15px;
+  }
+}

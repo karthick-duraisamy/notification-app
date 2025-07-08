@@ -1,0 +1,18 @@
+.cls-groups {
+  .ant-select-selection-item {
+    display: block;
+  }
+  .ant-select-selection-wrap {
+    margin: auto;
+  }
+  .folder-count {
+    color: var(--sub-title-color);
+    padding: 0px 5px;
+    margin-left: 2px;
+    position: relative;
+    bottom: 6px;
+  }
+  .ant-select-selection-overflow {
+    flex-wrap: unset;
+  }
+}

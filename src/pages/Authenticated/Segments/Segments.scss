@@ -1,0 +1,28 @@
+.cls-segment {
+  .cls-header-ele {
+    .ant-col-4 {
+      text-align: right;
+      margin: auto;
+    }
+  }
+  .cls-filter-ele {
+    .ant-space {
+      margin-right: 20px;
+      .ant-input-affix-wrapper {
+        height: 32px;
+      }
+    }
+  }
+  .cls-segment-table {
+    .ant-table-tbody {
+      .ant-table-cell {
+        padding: 8px 15px !important;
+      }
+      .cls-multiple-item {
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

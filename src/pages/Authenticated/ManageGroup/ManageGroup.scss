@@ -1,0 +1,68 @@
+.cls-manage-group {
+  .cls-header-ele {
+    .ant-col-4 {
+      text-align: right;
+      margin: auto;
+    }
+  }
+
+  .cls-filter-ele {
+    .ant-space {
+      margin-right: 20px;
+
+      .ant-input-affix-wrapper {
+        height: 32px;
+      }
+    }
+  }
+
+  .cls-group-table {
+    .ant-table-tbody {
+      .ant-table-cell {
+        padding: 8px 15px !important;
+
+        .cls-group-name {
+          cursor: pointer;
+          color: #3a86ff;
+          font-weight: bold;
+        }
+      }
+
+      .cls-multiple-item {
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.cls-modal-section {
+  width: 700px !important;
+  height: 320px !important;
+  overflow-y: auto;
+}
+
+.cls-modal-section {
+  .ant-modal-content {
+    border-radius: 8px;
+
+    .ant-modal-body {
+      padding-bottom: 5px;
+      padding-top: 15px;
+
+      .ant-modal-close {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+
+        .ant-modal-close-x {
+          line-height: 22px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}

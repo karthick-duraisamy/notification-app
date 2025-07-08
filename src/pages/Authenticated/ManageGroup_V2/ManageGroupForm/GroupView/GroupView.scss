@@ -1,0 +1,155 @@
+.cls-contact-details {
+  margin: 20px auto;
+
+  .ant-col-24 {
+    .cls-group-info {
+      background-color: var(--background);
+      // border: 1px dashed var(--summary-details);
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0px;
+
+      .cls-justify-between {
+        .ant-btn-default {
+          margin-right: 10px;
+          color: var(--primary-text);
+          font-size: 12px;
+
+          &:hover {
+            color: var(--sub-title-color) !important;
+            border-color: var(--sub-title-color) !important;
+          }
+        }
+
+        .cls-delete-button {
+          color: var(--btn-primary-color);
+
+          &:hover {
+            color: var(--btn-primary-hover-color) !important;
+            border-color: var(--btn-primary-hover-color) !important;
+          }
+        }
+      }
+
+      .cls-tag {
+        padding: 12px;
+        border-radius: 10px;
+        color: var(--background);
+        background: var(--sub-title-color);
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      h3 {
+        padding: 5px 0px;
+      }
+
+      .cls-group-info-row {
+        padding: 10px 0px;
+
+        .ant-col {
+          font-size: 12px;
+          color: var(--theme-template-folder);
+        }
+
+        .ant-col:first-child {
+          margin-right: 10px;
+        }
+      }
+
+      p {
+        margin: 0px;
+      }
+
+      p {
+        span:first-child {
+          font-size: 18px;
+          color: var(--whatsapp);
+        }
+      }
+
+      p {
+        span {
+          margin-right: 10px;
+        }
+      }
+
+      .ant-col-1 {
+        margin: auto;
+        color: var(--whatsapp);
+        cursor: pointer;
+      }
+
+      .anticon-delete {
+        color: var(--btn-primary-color);
+        cursor: pointer;
+      }
+
+      .ant-btn-link {
+        color: var(--btn-primary-color);
+        cursor: pointer;
+      }
+
+      .cls-upload-history-btn {
+        color: var(--btn-primary-color);
+      }
+    }
+
+    .cls-contact-info {
+      background-color: var(--secondary-bg);
+      border: 1px dashed var(--summary-details);
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 30px;
+
+      .ant-col-24 {
+        background-color: var(--secondary-bg);
+        border: none;
+        padding: 5px;
+      }
+    }
+  }
+
+  .ant-col-2 {
+    margin: auto;
+  }
+}
+
+.cls-dynamic-form {
+  width: 900px !important;
+
+  .fields-container {
+    max-height: 290px;
+    overflow: auto;
+  }
+}
+
+.cls-table-card {
+  .ant-row {
+    button {
+      width: 45px;
+      height: 45px;
+      background-color: var(--secondary-bg);
+      color: var(--sub-title-color);
+      margin-right: 5px;
+
+      &:hover {
+        background-color: var(--secondary-bg) !important;
+      }
+    }
+
+    .cls-selected {
+      background-color: var(--btn-reset-color);
+
+      &:hover {
+        background-color: var(--btn-reset-color) !important;
+      }
+    }
+  }
+}
+
+.cls-edit-form {
+  .ant-modal-content {
+    padding: unset;
+  }
+}

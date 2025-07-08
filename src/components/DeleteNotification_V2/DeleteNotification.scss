@@ -1,0 +1,70 @@
+.cls-delete-confirmation-modal {
+  .ant-modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px 24px;
+  }
+
+  .ant-modal-body {
+    padding: 24px;
+  }
+
+  .cls-delete-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .cls-delete-animation {
+      width: 200px;
+      height: 120px;
+      margin-bottom: 16px;
+      object-fit: contain;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: var(--primary-text);
+      line-height: 1.5;
+    }
+  }
+
+  .ant-modal-confirm-btns {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    button {
+      min-width: 80px;
+    }
+  }
+
+  .cls-delete-concern {
+    padding: 10px;
+    background: var(--form-header-color1);
+    border-radius: 8px;
+    margin-top: 10px;
+
+    .ant-switch {
+      margin-right: 10px;
+    }
+
+    .ant-switch.ant-switch-checked {
+      background-color: var(--btn-primary-color) !important;
+    }
+  }
+
+  .cls-delete-warning {
+    padding: 10px;
+    background: var(--form-header-color2);
+    border-radius: 8px;
+    margin-top: 10px;
+    color: var(--btn-primary-color);
+
+    .anticon-info-circle {
+      margin-right: 5px;
+    }
+  }
+}

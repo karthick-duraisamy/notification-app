@@ -1,0 +1,80 @@
+.cls-campaign {
+  .ant-col-4 {
+    margin: auto;
+  }
+
+  .cls-select-option {
+    margin-left: 20px;
+  }
+
+  .cls-campaign-table {
+    .ant-table-tbody {
+      .ant-table-cell {
+        padding: 8px 15px !important;
+
+        .cls-group-name,
+        .cls-view-link {
+          cursor: pointer;
+          color: var(--sub-title-color);
+          font-weight: bold;
+        }
+      }
+
+      .cls-multiple-item {
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .cls-header-ele .ant-col-4 {
+    margin: 0px 5px 0px auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cls-table-card {
+    .ant-row {
+      button {
+        width: 45px;
+        height: 45px;
+        background-color: var(--secondary-bg);
+        color: var(--sub-title-color);
+        margin-right: 5px;
+
+        &:hover {
+          background-color: var(--sub-title-color) !important;
+        }
+      }
+    }
+  }
+
+  .cls-delete-icon {
+    color: var(--btn-primary-color) !important;
+  }
+}
+
+.cls-percentage-type {
+  .ant-radio-button-wrapper {
+    color: #8187ad;
+    padding: 0 10px;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+
+    &:first-child {
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  .ant-radio-button-wrapper-checked,
+  .ant-radio-button-wrapper:hover {
+    color: var(--secondary-text);
+    background: var(--hover-bg);
+    border-color: var(--hover-bg);
+  }
+}
+
+.ant-tooltip-inner {
+  color: var(--primary-text) !important;
+}

@@ -1,0 +1,105 @@
+.cls-delete-confirmation-modal {
+  div {
+    .ant-modal-content {
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px 24px 50px 20px;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 24px 24px 10px 24px;
+    }
+
+    .cls-delete-modal-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .cls-delete-animation {
+        width: 200px;
+        height: 120px;
+        margin-bottom: 18px;
+        object-fit: contain;
+      }
+      .cls-delete-icon {
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-weight: 100;
+        margin: 0;
+        font-size: 18px;
+        color: var(--modal-para-color);
+        line-height: 1.5;
+      }
+    }
+
+    .ant-modal-confirm-btns {
+      margin-top: 24px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+
+      button {
+        min-width: 80px;
+      }
+    }
+
+    .cls-delete-concern {
+      padding: 10px;
+      background: var(--form-header-color1);
+      border-radius: 8px;
+      margin-top: 10px;
+
+      .ant-switch {
+        margin-right: 10px;
+      }
+
+      .ant-switch.ant-switch-checked {
+        background-color: var(--btn-primary-color) !important;
+      }
+    }
+
+    .cls-delete-warning {
+      padding: 10px;
+      background: var(--form-header-color2);
+      border-radius: 8px;
+      margin-top: 10px;
+      color: var(--btn-primary-color);
+
+      .anticon-info-circle {
+        margin-right: 5px;
+      }
+    }
+
+    .ant-modal-footer {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn-default {
+        border-color: var(--btn-modal-primary-color);
+        color: var(--btn-modal-primary-color);
+
+        span {
+          display: block;
+        }
+      }
+      .ant-btn-primary {
+        span {
+          display: block;
+        }
+      }
+
+      .ant-btn {
+        padding: 12px 52px;
+        font-size: 18px;
+        height: fit-content;
+      }
+    }
+  }
+}

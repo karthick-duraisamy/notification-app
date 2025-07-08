@@ -1,0 +1,159 @@
+.cls-common-style{
+  background-color: var(--background);
+  border-radius: 8px;
+  font-size:12px;
+  
+  .cls-primary-button {
+    background: var(--btn-primary-color) !important;
+    height: 45px;
+    border-radius: 5px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .anticon {
+      padding-left: 5px;
+    }
+    button {
+      background-color: var(--btn-primary-color) !important;
+    }
+    &:hover, button {
+      background: var(--btn-primary-hover-color) !important;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      
+      .anticon {
+        margin-right: 8px;
+      }
+    }
+    
+    &:not(:disabled) {
+      .anticon {
+        margin-right: 8px;
+        transition: all 0.3s;
+      }
+      
+      &:hover .anticon {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .cls-custom-filter-btn {
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 45px;
+
+      button {
+          background-color:  var(--sub-title-color) !important;
+          color: var(--background) !important;
+          font-size: 13px;
+          border-radius: 5px;
+          padding: 5px 10px;
+          display: flex;
+          align-items: center;
+          transition: all 1s ease;
+          height: 100%;
+          width:fit-content;
+          margin: 0px 5px;
+      }
+
+      button:hover {
+          border-color: transparent;
+          background-color: var(--sub-title-hover-color) !important;
+          color: var(--secondary-text);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+      .cls-apply-btn .cls-filter-animation {
+          width: 25px;
+      }
+  }
+   .cls-filter-ele {
+    background-color: var(--sub-title-color);
+    padding: 10px 20px;
+    border-top: 1px solid var(--theme-border-color);
+    .ant-space {
+      margin-right: 20px;
+
+      .ant-input-affix-wrapper {
+        height: 33px;
+      }
+    }
+  }
+  .cls-border-bottom{
+    border-bottom : 1px dashed var(--dashed-border);
+    padding : 10px 20px;
+  }
+  .cls-title-color
+  {
+    color:#495057;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .cls-align-center
+  {
+    display: flex;
+    align-items: center;
+  }
+  .ant-table-tbody, .ant-table-thead{
+    font-size: 12px !important;
+  }
+  .cls-reset-btn {
+    height: 100%;
+  }
+  .cls-padding-right{
+    padding-right: 10px;
+  }
+  .cls-align-end{
+    display: flex;
+    align-items: end;
+  }
+
+  .cls-header-ele {
+    .cls-table-card {
+      .ant-row{
+        .cls-selected {
+            background-color: var(--btn-reset-color);
+          }
+        button {
+          width: 45px;
+          height: 45px;
+          background-color: var(--secondary-bg);
+          color: var(--sub-title-color);
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .cls-all-delete-btn {
+    color: var(--btn-primary-color) !important;
+    border-color: var(--btn-primary-color) !important;
+    background-color: var(--form-header-color2) !important;
+    width:42px;
+
+    &:hover {
+      color: var(--btn-primary-hover-color) !important;
+      border-color: var(--btn-primary-hover-color) !important;
+    }
+  }
+}
+
+.cls-justify-between{
+  display: flex;
+  justify-content: space-between;
+}
+.cls-common-style:has(.cls-campaign-form){
+  background-color: transparent;
+
+  .ant-input-affix-wrapper {
+    border:1px solid #d9d9d9 !important;
+  }
+}

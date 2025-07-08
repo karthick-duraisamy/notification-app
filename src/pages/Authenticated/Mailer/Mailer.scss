@@ -1,0 +1,234 @@
+// styles for Mailer.tsx
+.Mailer {
+  padding-top: 10px;
+
+  .cls-mailer-search-box {
+    .ant-input-affix-wrapper {
+      border: 1px solid var(--theme-select-border-color);
+      background-color: var(--theme-header-background);
+
+      .ant-input {
+        color: var(--theme-login-input-text-color);
+        background-color: var(--theme-header-background);
+      }
+
+      .ant-input-suffix {
+        span {
+          svg path {
+            fill: var(--theme-select-dropdown-icon);
+          }
+        }
+
+        // color: var(--theme-select-dropdown-icon);
+      }
+    }
+  }
+}
+
+.cls-api-docs {
+  border: 1px solid var(--theme-select-border-color);
+
+  .ant-modal-title,
+  h4 {
+    color: var(--theme-login-input-text-color);
+  }
+
+  .ant-modal-header,
+  .ant-modal-body {
+    background-color: var(--theme-header-background);
+    color: var(--theme-login-input-text-color);
+  }
+
+  .ant-modal-content {
+    .ant-collapse-header,
+    .ant-collapse-content {
+      color: var(--theme-login-input-text-color);
+      border-color: var(--theme-select-border-color);
+    }
+
+    .ant-collapse-header {
+      background-color: var(--theme-setting-form-background);
+    }
+
+    .ant-collapse-content {
+      background-color: var(--theme-header-background);
+    }
+  }
+}
+
+// styles for MailerForm.tsx
+.MailerForm {
+  #mailer_name {
+    background-color: var(--theme-login-input-text) !important;
+    color: var(--theme-login-input-text-color) !important;
+    border-color: var(--theme-select-border-color) !important;
+  }
+
+  .form-btns {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px;
+  }
+}
+
+.cls-mailer-name {
+  max-width: 180px;
+  white-space: nowrap;
+}
+
+.cls-mailer-actions {
+  max-width: 200px;
+}
+
+.popover {
+  width: 90px;
+}
+
+.cls-mailer-created,
+.cls-mailer-updated {
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 480px), (min-width: 481px) and (max-width: 767px) {
+  .Mailer {
+    .Title_title-head__fcPfQ,
+    .Title_title-head-sub__iew7k {
+      padding: 0px 0px 12px 0px;
+    }
+
+    .cls-mailer-button {
+      padding: 5px;
+      font-size: 15px;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .cls-mailer-filter {
+      display: flex;
+
+      .ant-select .ant-select-selector {
+        margin: 0;
+      }
+    }
+
+    .cls-mailer-created,
+    .cls-mailer-updated,
+    .cls-mailer-actions,
+    .cls-mailer-status,
+    .cls-mailer-name .sub-head {
+      display: none;
+    }
+
+    .ant-table-cell {
+      font-size: 12px;
+    }
+
+    .cls-mailer-id {
+      width: 16%;
+    }
+
+    .action {
+      width: 12%;
+    }
+
+    .cls-mailer-name {
+      .head,
+      .sub-head {
+        display: block;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .cls-api-docs {
+    .ant-modal-body,
+    .ant-modal-content .ant-collapse-header {
+      font-size: 12px;
+    }
+  }
+
+  .MailerForm .form-container .fields-container {
+    .cls-dynamic-form:nth-child(2) {
+      border: 0px;
+      background: none;
+    }
+
+    .cls-dynamic-form {
+      border: 1px solid #dbdcdc;
+      padding: 20px 0px 0px 10px;
+      border-radius: 8px;
+      margin: 0px 15px 15px 0px;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .Mailer {
+    .Title_title-head__fcPfQ {
+      padding-top: 0px;
+    }
+
+    .cls-mailer-button {
+      font-size: 14px;
+      border-radius: unset;
+      width: auto;
+      height: auto;
+      padding: 5px 10px;
+
+      span:nth-child(2) {
+        display: inline;
+      }
+    }
+
+    .cls-mailer-status,
+    .cls-details:nth-child(2) {
+      display: block;
+    }
+
+    .action {
+      width: 12% !important;
+    }
+
+    .cls-mailer-name {
+      width: 40%;
+    }
+
+    tbody td:nth-child(7) {
+      padding-top: 33px;
+    }
+
+    .cls-details:nth-child(4) {
+      display: none;
+    }
+
+    .cls-select-option,
+    .ant-input-affix-wrapper {
+      min-width: 180px !important;
+    }
+  }
+
+  .cls-details:nth-child(1) {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cls-mailer-created,
+  .cls-mailer-updated {
+    display: none;
+  }
+
+  .ant-table-cell {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,239 @@
+.ThemeChanger {
+  .ant-radio-button-wrapper {
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+
+    border: 0;
+    height: auto;
+    box-shadow: none !important;
+
+    &.dark {
+      svg {
+        background: #2c3768b3;
+        border-radius: 3px;
+      }
+
+      .checked-icon svg {
+        background: none;
+      }
+    }
+  }
+}
+
+.NavBgChanger {
+  .ant-radio-button-wrapper {
+    padding: 12px;
+    border-radius: 5px;
+
+    &.navlight {
+      border: 1px solid #323233 !important;
+      background: #ffffff;
+    }
+
+    &.navdark {
+      border: 1px solid #1c2533;
+      // background: #1e2962;
+      background: var(--nav-dark);
+    }
+  }
+}
+
+.ThemeChanger,
+.NavBgChanger {
+  .ant-radio-button-wrapper {
+    margin-right: 1rem;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    .checked-icon {
+      display: block;
+    }
+  }
+
+  .checked-icon {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+  }
+}
+
+.theme-change,
+.sider-change,
+.notification {
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.notification {
+  h3 {
+    margin: unset;
+  }
+}
+
+.cls-menu-layout {
+  p {
+    margin-bottom: unset;
+  }
+  &-container {
+    display: flex;
+    gap: 15px;
+  }
+}
+label {
+  &.cls-layout-label {
+    input {
+      appearance: none;
+      &:checked ~ div svg {
+        display: block;
+      }
+    }
+  }
+  .cls-vertical-menu,
+  .cls-horizontal-menu {
+    position: relative;
+    svg {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      display: none;
+    }
+  }
+}
+.cls-vertical-menu {
+  width: 75px;
+  display: flex;
+  height: 55px;
+  border: 1px solid var(--menuColor);
+  border-radius: 5px;
+  aside {
+    background: var(--menuColor);
+    width: 20%;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .cls-menu-container {
+    width: 80%;
+    margin: 7px 5px 5px 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .cls-menu-content {
+    background: var(--menuColor);
+    height: 5px;
+    border-radius: 5px;
+  }
+}
+.cls-horizontal-menu {
+  width: 75px;
+  display: flex;
+  height: 55px;
+  border: 1px solid var(--menuColor);
+  border-radius: 5px;
+  flex-direction: column;
+  header {
+    background: var(--menuColor);
+    height: 20%;
+    width: calc(100% - 10px);
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .cls-menu-container {
+    width: calc(100% - 10px);
+    margin: 0px 5px 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .cls-menu-content {
+      background: var(--menuColor);
+      height: 4px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px), (min-width: 481px) and (max-width: 767px) {
+  .ant-drawer-content-wrapper {
+    width: 280px !important;
+  }
+
+  .ant-drawer-wrapper-body {
+    padding: 0px 15px;
+  }
+}
+
+.mar-btm-15 {
+  margin-bottom: 15px;
+}
+
+.sider-change {
+  padding-bottom: unset;
+  .content-wrapper {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    &.open {
+      max-height: 500px; /* Adjust based on content height */
+      opacity: 1;
+      padding-bottom: 15px;
+    }
+    .content-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .cls-colorpicker-label {
+        display: flex;
+        align-items: center;
+        // gap: 10px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      .cls-colorpicker-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.cls-customize-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-picker-container {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  .color-input-box {
+    max-width: 80px;
+    border: 1px solid #ccc;
+    border-right: unset;
+    border-radius: 4px 0 0 4px;
+    padding: 4px 4px 4px 8px;
+  }
+}
+
+.color-preview-box {
+  width: 26px;
+  height: 26px;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-picker-dropdown {
+  position: absolute;
+  z-index: 1000;
+  top: 35px;
+  right: 0;
+}

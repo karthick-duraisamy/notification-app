@@ -1,0 +1,40 @@
+.Templates {
+  .view-switch {
+    .ant-radio-button-wrapper {
+      color: #8187ad;
+      padding: 0 10px;
+      margin-left: 0.5rem;
+      border-radius: 4px;
+    }
+
+    .ant-radio-button-wrapper-checked,
+    .ant-radio-button-wrapper:hover {
+      color: var(--secondary-text);
+      background: var(--hover-bg);
+    }
+  }
+
+  .new-template {
+    .ant-col {
+      transition: 0.5s all;
+    }
+  }
+
+  .ant-tabs-tab {
+    color: var(--primary-text) !important;
+  }
+}
+
+.flex-container {
+  h2 {
+    color: var(--theme-login-input-text-color);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
+    padding: 0;
+    font-size: 14px;
+    margin: 15px !important;
+  }
+}

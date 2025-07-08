@@ -1,0 +1,9 @@
+.ant-breadcrumb {
+  margin: 16px 0;
+  span {
+    color: var(--theme-login-input-text-color);
+  }
+}
+.ant-breadcrumb a {
+  color: var(--theme-breadcrumb-color) !important;
+}

@@ -1,0 +1,39 @@
+.title {
+  color: var(--title-color);
+  text-align: center;
+
+  &-head {
+    font-size: 24px;
+    font-family: var(--font-bold);
+    margin-bottom: 0;
+
+    &-sub {
+      color: #bdbdbd;
+      margin: 8px 0px !important;
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        margin: 0;
+        padding: 5px 0px;
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      font-size: 20px;
+      padding-top: 0px;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    padding-top: 15px;
+    text-align: left;
+  }
+}
+
+.normal {
+  color: var(--label-color);
+
+  .title-head {
+    font-family: var(--font-title);
+  }
+}

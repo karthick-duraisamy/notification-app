@@ -1,0 +1,15 @@
+.PopoverMenu {
+  .ant-popover-inner-content {
+    padding: 12px 0;
+    width: min-content;
+
+    .ant-popover-buttons {
+      text-align: center !important;
+    }
+  }
+}
+
+.cls-flex-start {
+  display: flex;
+  justify-content: flex-start;
+}

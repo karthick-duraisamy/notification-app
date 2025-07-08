@@ -1,0 +1,45 @@
+.radioSwitch {
+  background-color: var(--theme-radioSwitch);
+  border-radius: 25px;
+  height: 32px;
+  label {
+    margin: 5px;
+    padding: 0 10px;
+    border-radius: 25px !important;
+    border: none;
+    color: var(--theme-landing-switch-text);
+    background-color: unset;
+  }
+
+  .cls-radio-switch {
+    height: unset;
+    line-height: 20px;
+    vertical-align: text-bottom;
+    border-inline-start: unset;
+    span {
+      color: var(--theme-picker-text-color);
+      font-size: 12px;
+    }
+  }
+
+  .ant-radio-button {
+    border-radius: 25px;
+  }
+
+  .ant-radio-button-wrapper::before,
+  .ant-radio-button-wrapper-checked::before {
+    background-color: unset !important;
+  }
+
+  .ant-radio-button-wrapper-checked:first-child {
+    border: none;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    background-color: var(--theme-picker-text-bg-color) !important;
+  }
+
+  svg {
+    vertical-align: text-bottom;
+  }
+}

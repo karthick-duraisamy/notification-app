@@ -1,0 +1,243 @@
+pipeline {
+    agent any
+    options {
+        disableConcurrentBuilds()
+    }
+    parameters {
+        choice(
+            choices: ['MailTemplateBuild' , 'MailTemplateRevert' ],
+            description: '',
+            name: 'REQUESTED_ACTION')
+    }
+
+    environment {
+        ENVEXECFILE = "http://192.168.1.140:3000/INFINITI/email_templates.git"
+        ENVDELFILE = ""
+        GITEAURL = "http://192.168.1.140:3000/INFINITI/email_templates.git/commit"
+        USERNAME_PASSWORD = credentials("0e3b896a-8542-487b-ad04-2ba5d47c3ce8")
+        MYSQL_CREDENTIALS = credentials("4859d2d7-60a2-43c8-bffa-0e0d8566eaf6")
+        PRODUCT_NAME = "Email_template"
+        REPOSITORY_NAME = "GRM_Email_template"
+        SERVER_IP = "3.121.187.192"
+        SERVER_NAME = "GRM_CommonPack_php73_Mysql8_Server"
+        SERVER_FOLDER_PATH = "/home/Staging/Mailer_Live"
+        DOCSTRING=""
+    }
+    stages {
+         stage('RevertMailTemplateBuild') {
+           when {
+                beforeInput true
+                expression { params.REQUESTED_ACTION == 'MailTemplateRevert' }
+            }
+           input {
+                message 'Please enter build number to revert MailTemplate React build ?'
+                parameters {
+                    string(name: 'angularrevertbuild_number', defaultValue: '', description: 'Enter your Job build number to revert angular build ?')
+                }
+            }
+
+
+            steps {
+                wrap([$class: 'BuildUser']) {
+                    echo 'Building Zip files..'
+                    script {
+                        if (env.angularrevertbuild_number) {
+                            echo "angularrevertbuild_number is the ${angularrevertbuild_number}"
+                        }
+                    }
+
+                    sh '''
+                        echo "sudo cd /home/Staging/Mailer_Live" > angularrevertscript_$BUILD_NUMBER.sh
+                        echo "sudo cp -R Mail_template Mail_template_$BUILD_NUMBER" >> angularrevertscript_$BUILD_NUMBER.sh
+                        echo "sudo rm -rf Mail_template" >> angularrevertscript_$BUILD_NUMBER.sh
+                        echo "sudo cp -R Mail_template_${angularrevertbuild_number} Mail_template" >> angularrevertscript_$BUILD_NUMBER.sh
+
+
+                        mkdir -p angularrevert
+                        sudo chmod -R 777 angularrevert
+                        sudo mv angularrevertscript_$BUILD_NUMBER.sh angularrevert/angularrevertscript_$BUILD_NUMBER.sh
+                        sudo chmod -R 777 angularrevert     
+                        #make zip file to execute in server
+                        cd angularrevert
+                        sudo zip -r angularrevertjob_$BUILD_NUMBER.zip angularrevertscript_$BUILD_NUMBER.sh
+                        sudo rm -f angularrevertscript_$BUILD_NUMBER.sh
+
+                        '''
+                }
+            }
+        }
+
+stage('MailTemplate React Build Code') {
+                  when {
+                beforeInput true
+                expression { params.REQUESTED_ACTION == 'MailTemplateBuild' }
+            }
+            input {
+                message 'Please enter tag name to build otherwise it will take last tag name ?'
+                parameters {
+                    string(name: 'tag_name', defaultValue: '', description: 'Enter your tag name to build ?')                     
+                }
+               }
+            
+            steps {
+                wrap([$class: 'BuildUser']) {
+                    echo 'Building Angular files..'
+                    sh '''
+                            echo "$tag_name"                            
+                            #make build directoy
+                            mkdir -p $WORKSPACE/angularbuild/temp
+                            chmod -R 777 $WORKSPACE/angularbuild/temp
+                            git fetch --tags -f
+                            git archive --format=tar.gz $tag_name >$tag_name.tar.gz
+                            mv $tag_name.tar.gz angularbuild/temp
+                            cd angularbuild/temp
+                            tar -xf $tag_name.tar.gz
+                            rm -rf $tag_name.tar.gz
+                            echo "" | sudo -s chmod -R 777 *
+                            echo y | yarn install
+                            export NODE_OPTIONS="--max-old-space-size=8192"
+                            yarn build --project=email-templates
+
+                            tar -cJf build.tar.xz build
+                            mv build.tar.xz ../
+                            cd ../
+                            rm -rf temp                                                        
+                        fi
+                        '''
+               }
+            }
+        } 
+
+               
+         stage('Revert to previous Mailtemplate React Build') {
+          when {
+                beforeInput true
+                expression { params.REQUESTED_ACTION == 'MailTemplateRevert' }
+            }
+
+
+        input {
+                message 'Do you want to revert previous MailTemplate React build to server? - (For Yes - enter "Y", No - enter "N")? Kindly approve the revert?'
+                ok "Approve"
+                parameters {
+                    string(name: 'is_angularrevert_need', defaultValue: '', description: 'Enter your choice for build ?')  
+ 
+                }
+                submitter "balaji"
+                submitterParameter 'approved_user' 
+                
+            }
+            
+            steps('Revert previous angular build to server') {
+                wrap([$class: 'BuildUser']) {
+                       script {
+                        if (env.is_angularrevert_need == 'Y' || env.is_angularrevert_need == 'y' || env.is_angularrevert_need == 'Yes') {
+                        sshPublisher(
+                            publishers: [
+                                sshPublisherDesc(
+                                    configName: 'GRM_CommonPack_php73_Mysql8_Server', 
+                                    transfers: [
+                                        sshTransfer(
+                                            cleanRemote: false,
+                                            excludes: '', 
+                                            execCommand: 'cd /home/Staging/Mailer_Live && unzip -o angularrevertjob_$BUILD_NUMBER.zip && rm -f angularrevertjob_$BUILD_NUMBER.zip.zip && sudo chmod 777 angularrevertscript_$BUILD_NUMBER.sh && sh angularrevertscript_$BUILD_NUMBER.sh && rm -f *.zip && rm -f angularrevertscript_$BUILD_NUMBER.sh && sudo chmod -R 777 *', 
+                                            execTimeout: 30000, 
+                                            flatten: false, 
+                                            makeEmptyDirs: false, 
+                                            noDefaultExcludes: false, 
+                                            patternSeparator: '[, ]+', 
+                                            remoteDirectory: '//home/Staging/Mailer_Live/', 
+                                            remoteDirectorySDF: false, 
+                                            removePrefix: 'angularrevert', 
+                                            sourceFiles: 'angularrevert/angularrevertjob_$BUILD_NUMBER.zip'
+                                        )
+                                    ], 
+                                    usePromotionTimestamp: false, 
+                                    useWorkspaceInPromotion: false, 
+                                    verbose: true
+                                )
+                            ]
+                        )
+                    }
+                }
+	        }
+        }
+    }
+         
+        stage('Build & Move Mailtemplate React code') {
+          when {
+                beforeInput true
+                expression { params.REQUESTED_ACTION == 'MailTemplateBuild' }
+            }
+            input {
+                message 'Do you want move the Mailtemplate react build files? - (For Yes - enter "Y", No - enter "N")? Kindly approve the file movement?'
+                ok "Approve"
+                parameters {
+                    string(name: 'is_build_need', defaultValue: '', description: 'Enter your choice for angular build ?')   
+                }
+                submitter "balaji"
+                submitterParameter 'approved_user' 
+            }
+            
+            steps {
+                wrap([$class: 'BuildUser']) {
+                    echo 'Building Angular files..'
+                    script {
+                        if (env.is_build_need == 'Y' || env.is_build_need == 'y' || env.is_build_need == 'Yes') { 
+                            sshPublisher(
+                                publishers: [
+                                    sshPublisherDesc(
+                                        configName: 'GRM_CommonPack_php73_Mysql8_Server', 
+                                        transfers: [
+                                            sshTransfer(
+                                                cleanRemote: false,
+                                                excludes: '', 
+                                                execCommand: 'cd /home/Staging/Mailer_Live && mv Mail_template_v2 Mail_template_v2_$BUILD_NUMBER && tar xf build.tar.xz && mv build Mail_template_v2 && sudo chmod -R 777 /home/Staging/Mailer_Live/Mail_template_v2', 
+                                                execTimeout: 30000, 
+                                                flatten: false, 
+                                                makeEmptyDirs: false, 
+                                                noDefaultExcludes: false, 
+                                                patternSeparator: '[, ]+', 
+                                                remoteDirectory: '//home/Staging/Mailer_Live/', 
+                                                remoteDirectorySDF: false, 
+                                                removePrefix: 'angularbuild', 
+                                                sourceFiles: 'angularbuild/build.tar.xz'
+                                            )
+                                        ], 
+                                        usePromotionTimestamp: false, 
+                                        useWorkspaceInPromotion: false, 
+                                        verbose: true
+                                    )
+                                ]
+                            )
+                        }
+                    }
+                }
+            }
+        }        
+}
+
+    post { 
+        always {
+          script {
+            if (env.REQUESTED_ACTION == 'MailTemplateBuild') {
+            sh '''
+            QUERYSTRING=""
+            RESULT=`curl -X GET "http://localhost/deployment/api.php?JOB_NAME=$JOB_NAME&JOB_ID=$BUILD_NUMBER"`
+            QUERYSTRING="UPDATE jenkins_deployment_data SET job_status='$RESULT',approved_by='$approved_by',approved_datetime = '$approved_date' WHERE job_id = '${BUILD_NUMBER}' AND job_name = '${JOB_NAME}';"
+            NOW=`date "+%Y_%m_%d_%H_%M_%S"`
+
+            '''
+
+            echo "Final Output --> ${currentBuild.result}"
+           }
+          else {
+           echo 'Files reverted'
+           }
+           }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,353 @@
+// @use '~antd/dist/antd.variable.min.css';
+
+/* common font, color variable */
+body {
+  // --font-regular: 'OpenSansRegular';
+  --font-regular: 'Poppins';
+  --font-semibold: 'OpenSansSemiBold';
+  --font-bold: 'OpenSansBold';
+  --font-title: 'OpenSansRegular';
+
+  --title-size: 24px;
+  --subtitle-size: 16px;
+}
+
+body.light {
+  // ant overide color here
+  --menuColor: #cdddf5;
+  --ant-primary-color: #fd9646;
+  --menu-border: rgba(5, 5, 5, 0.06);
+  --menu-border-bottom: rgba(5, 5, 5, 0.1);
+  //our tool theming here
+  --header-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  --aside-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.161);
+  --t-common-primary: #133769;
+  --t-submenu-hover-bg-color: #d5e7ff;
+  --edit-details-form-border: #e5e7eb;
+  --contact-summary: 37, 99, 235;
+  --group-summary: 31, 41, 55;
+  --segment-summary: 139, 92, 246;
+  --campaign-summary: 16, 185, 129;
+  --background: #fff;
+  --secondary-bg: #f2f5f8;
+  --primary-text: #000;
+  --secondary-text: #fff;
+  --menu-bgcolor: #fff;
+  --title-color: #091865;
+  --logo-color: #0e2071;
+  --sec-logo-color: #fd9646;
+  --menu-hover-clr: rgba(0, 0, 0, 0.06);
+  --db-text-color: #636466;
+  --theme-picker-text-color: #1f2226;
+  --theme-picker-text-bg-color: #ffffff;
+  --theme-breadcrumb-color: rgba(0, 0, 0, 0.45);
+  --theme-template-folder: #aaaec6;
+  --theme-radioSwitch: #cee1fc;
+  --theme-landing-left-page: #e5e8f9;
+  --theme-landing-logo-text: #0e2071;
+  --theme-landing-switch-text: #414970;
+  --theme-landing-switch-border: #f3f8ff;
+  --theme-forgot-password-label: rgba(0, 0, 0, 0.85);
+  --theme-login-input-text: #ffffff;
+  --theme-header-background: #ffffff;
+  --theme-tracking-model-bg: #ffffff;
+  --menu-icon-color: #000;
+  --theme-login-input-text-color: #000000;
+  --theme-login-input-text-border: #cee1fc;
+  --theme-dashboard-total-alert: #ddeef8;
+  --theme-dashboard-queue-alert: #fee9f7;
+  --theme-dashboard-template-alert: #def7e7;
+  --theme-dashboard-total-icon-color: #5026e0;
+  --theme-dashboard-queue-icon-color: #fc2b94;
+  --theme-dashboard-template-icon-color: #51d166;
+  --theme-select-border-color: #dbdcdc;
+  --theme-select-dropdown-icon: #dbdcdc;
+  --theme-table-subhead: #4c5475;
+  --theme-dashboard-select-border: #dbdcdc;
+  --theme-home-layout-background: #f2f5f8;
+  --theme-setting-form-background: #ffffff;
+  --theme-setting-from-container: #f2f5f8;
+  --theme-upload-attachment: #fff;
+  --theme-tempalte-column-outer-border: #cee1fc;
+  --theme-template-column-primary-color: #d0d8fc;
+  --theme-template-column-primary-border: #b7c3f9;
+  --theme-template-secondary-column: #ecebeb;
+  --theme-template-third-column-layout: #f1f1f1;
+  --theme-template-seventh-layout-column: #dbdbdb;
+  --theme-template-seventh-fill-color: #f5f5f5;
+  --theme-template-layout-eight-sub-row-color: #bfbfbf;
+  --app-title-color: #092247;
+  --link-color: #091865;
+  --check-box-color: #0c28a8;
+  --border-hover-color: #4b94fc;
+  --label-color: #000000d9;
+  --form-icon-color: #a4a9c2;
+  --footer-gray-color: #747788;
+  --page-background: #f2f5f8;
+  --active: #28a745;
+  --in-active: #dc3545;
+  --whatsapp: #007bff;
+  --hover-bg: #0c28a8;
+  --hover-color: #ffffff;
+  --menu-bg: #fff;
+  --theme-menu-bg-color: #fff;
+  --theme-menu-active-bg-color: #0c28a8;
+  --theme-import-template-input: #4e5572;
+  --theme-import-template-bg-color: #fff;
+  --tab-border: #dce0e3;
+  --tab-active-border: #0c28a8;
+  --notification-border: #e2e2e2;
+  --total-count-notification: #1e44a8;
+  --summary-details: #666666;
+  --fill-legend-background: #7480a2;
+
+  --btn-primary-color: #f06548;
+  --btn-primary-hover-color: #cc563d;
+  --sub-title-color: #405189;
+  --sub-title-hover-color: #364574;
+  --btn-apply-color: #0ab39c;
+  --btn-apply-hover-color: #099885;
+  --btn-reset-color: #f7b84b;
+  --btn-reset-hover-color: #d29c40;
+  --btn-background: #c6d6dd;
+  --dashed-border: #e9ebec;
+  --inside-btn-hover-color: #1890ff;
+  --form-header-color1: #eef2ff;
+  --form-header-color2: #fdf2f8;
+  --form-header-color3: #ecfdf5;
+  --form-header-color4: #fefce8;
+  --nav-dark: #708090;
+  --card-border: #eef5ff;
+  --ai-theme-bg-color: #9900ff;
+  --cursor-bg: #d1fae5;
+  --mailicon-bg: #e0e7ff;
+  --mailicon-color: #4f46e5;
+  --campaign-head: #7a00ff;
+  --btn-modal-primary-color: #133769;
+  --modal-para-color: #454545;
+  --selected-option-color: #f0f0f0;
+  --group-tile-color: #1d4a88;
+  --contact-tile-color: #7dc89a;
+  --segment-tile-color: #ff9150;
+  --campaign-tile-color: #c25b8b;
+  --divider-border-color: #33333338;
+  --card-border-color: #cccccc;
+  --card-show-border-color: #e7e7e7;
+  --card-show-background-color: #f3f3f3;
+  --panel-header-color: #fafafa;
+  --panel-primary-color: #0b1f3c;
+  --not-completed-background: #fff1f0;
+  --not-completed-border: #ffa39e;
+  --not-completed-color: #f5222d;
+  --completed-background: #f6ffed;
+  --completed-border: #b7eb8f;
+  --completed-color: #52c41a;
+  --info-background: #e6f7ff;
+  --info-border: #91d5ff;
+}
+
+body.dark {
+  // ant override color here
+  --ant-primary-color: #fd9646;
+
+  // our tool theming here
+  --menuColor: #cdddf5;
+  --background: #181a1b;
+  --secondary-bg: #07091d;
+  --logo-color: #ffffff;
+  --db-text-color: #e0e0e0;
+  --total-count-notification: #ffffff;
+  --theme-picker-text-color: #ffffff;
+  --theme-picker-text-bg-color: #42496a;
+  --theme-breadcrumb-color: rgba(255, 255, 255, 0.45);
+  --theme-template-folder: #0e2071;
+  --theme-radioSwitch: #262f50;
+  --theme-login-input-text: #373f51;
+  --theme-landing-logo-text: #ffffff;
+  --theme-landing-left-page: #262f50;
+  --theme-landing-switch-text: #ffffff;
+  --theme-landing-switch-border: #8f93a4;
+  --theme-forgot-password-label: #ffffff;
+  --theme-login-input-text-border: #3a3d3f;
+  --theme-login-input-text-color: #ffffff;
+  --theme-header-background: #23233f;
+  --theme-tracking-model-bg: #23233f;
+  --theme-dashboard-total-alert: #23233f;
+  --theme-dashboard-queue-alert: #23233f;
+  --theme-dashboard-template-alert: #23233f;
+  --theme-dashboard-total-icon-color: #fc2b94;
+  --theme-dashboard-queue-icon-color: #51d166;
+  --theme-dashboard-template-icon-color: #6451de;
+  --theme-select-border-color: #042149;
+  --theme-select-dropdown-icon: #ffffff;
+  --theme-table-subhead: #b6b2b2;
+  --theme-menu-bg-color: #26273b;
+  --theme-menu-active-bg-color: #3d4e9b;
+  --theme-import-template-input: #4e5572;
+  --theme-tempalte-column-outer-border: #082148;
+  --theme-template-column-primary-color: #7485d4;
+  --theme-template-column-primary-border: #081860;
+  --theme-template-secondary-column: #525a84;
+  --theme-template-third-column-layout: #525a84;
+  --theme-template-seventh-layout-column: #7485d4;
+  --theme-template-seventh-fill-color: #212b5b;
+  --theme-template-layout-eight-sub-row-color: #fd9646;
+  --theme-dashboard-select-border: #23233f;
+  --theme-home-layout-background: #171717;
+  --theme-setting-form-background: #171717;
+  --theme-setting-from-container: #1f1f36;
+  --theme-upload-attachment: #1f1f36;
+  --theme-import-template-bg-color: #323956;
+  --primary-text: #fff;
+  --secondary-text: #fff;
+  --title-color: #fff;
+  --app-title-color: #ffffff;
+  --link-color: #fff;
+  --check-box-color: #a4a9c2;
+  --border-hover-color: #fff;
+  --label-color: #fff;
+  --form-icon-color: #a4a9c2;
+  --footer-gray-color: #747788;
+  --page-background: #f2f5f8;
+  --active: #37c57a;
+  --in-active: #fd4646;
+  --hover-bg: #0c28a8;
+  --hover-color: #ffffff;
+  --menu-bg: #000;
+  --tab-border: #dce0e3;
+  --tab-active-border: #0c28a8;
+  --nav-dark: #708090;
+  --summary-details: #fff;
+}
+
+body.contrast-bw {
+  --ant-primary-color: black;
+
+  // our tool theming here
+  --background: #000;
+  --secondary-bg: #3a3d3f;
+  --primary-text: #fff;
+  --secondary-text: #fff;
+  --title-color: #fff;
+  --app-title-color: #092247;
+  --link-color: #fff;
+  --check-box-color: #a4a9c2;
+  --border-hover-color: #fff;
+  --label-color: #fff;
+  --form-icon-color: #a4a9c2;
+  --footer-gray-color: #747788;
+  --page-background: #f2f5f8;
+  --active: #37c57a;
+  --in-active: #fd4646;
+  --hover-bg: #0c28a8;
+  --hover-color: #ffffff;
+  --menu-bg: #000;
+  --tab-border: #dce0e3;
+  --tab-active-border: #0c28a8;
+}
+
+body.contrast-by {
+  --ant-primary-color: black;
+
+  // our tool theming here
+  --background: #000;
+  --secondary-bg: #3a3d3f;
+  --primary-text: #ff0;
+  --secondary-text: #ff0;
+  --title-color: #ff0;
+  --app-title-color: #092247;
+  --link-color: #ff0;
+  --check-box-color: #a4a9c2;
+  --border-hover-color: #fff;
+  --label-color: #ff0;
+  --form-icon-color: #a4a9c2;
+  --footer-gray-color: #747788;
+  --page-background: #f2f5f8;
+  --active: #37c57a;
+  --in-active: #fd4646;
+  --hover-bg: #0c28a8;
+  --hover-color: #ff0;
+  --menu-bg: #000;
+  --tab-border: #dce0e3;
+  --tab-active-border: #0c28a8;
+}
+
+body.contrast-yb {
+  --ant-primary-color: #ff0;
+
+  // our tool theming here
+  --background: #ff0;
+  --secondary-bg: #f5f85a;
+  --primary-text: #000;
+  --secondary-text: #000;
+  --title-color: #000;
+  --app-title-color: #092247;
+  --link-color: #000;
+  --check-box-color: #a4a9c2;
+  --border-hover-color: #fff;
+  --label-color: #000;
+  --form-icon-color: #a4a9c2;
+  --footer-gray-color: #747788;
+  --page-background: #f2f5f8;
+  --active: #37c57a;
+  --in-active: #fd4646;
+  --hover-bg: #0c28a8;
+  --hover-color: #ffffff;
+  --menu-bg: #ff0;
+  --tab-border: #dce0e3;
+  --tab-active-border: #0c28a8;
+}
+
+body.XY {
+  --background: #e1e1e1;
+  --font-regular: 'FlynasRegular';
+  --font-semibold: 'FlynasSemiBold';
+  --font-bold: 'FlynasBold';
+  --font-title: 'FlynasRegular';
+  --ant-primary-color: #00bfb3;
+  --theme-header-background: gainsboro;
+  --secondary-text: #fff;
+  --menu-bgcolor: #00bfb3;
+  --theme-select-border-color: #bbe5f3;
+  --theme-setting-form-background: #e1e1e1;
+  --theme-select-dropdown-icon: #00bfb3;
+  --theme-login-input-text-color: #000000;
+  --theme-tracking-model-bg: #c1c1c1;
+  --menu-icon-color: #fff;
+}
+
+body.Indigo {
+  --font-regular: 'PoppinsRegular';
+  --font-semibold: 'PoppinsRegular';
+  --font-bold: 'PoppinsBold';
+  --font-title: 'BauhausFonts';
+  --background: #fff;
+  --ant-primary-color: #fd9646;
+  --theme-header-background: #ffffff;
+  --secondary-text: #fff;
+  --menu-bgcolor: #fff;
+  --theme-select-border-color: #dbdcdc;
+  --theme-setting-form-background: #ffffff;
+  --theme-select-dropdown-icon: #dbdcdc;
+  --theme-login-input-text-color: #000000;
+  --theme-tracking-model-bg: #ffffff;
+  --menu-icon-color: #000;
+}
+
+body.QR {
+  --font-regular: 'GraphikRegular';
+  --font-semibold: 'GraphikMedium';
+  --font-bold: 'GraphikBold';
+  --font-title: 'JotiaMedium';
+  --background: #fff;
+  --ant-primary-color: #fd9646;
+  --theme-header-background: #ffffff;
+  --secondary-text: #fff;
+  --menu-bgcolor: #fff;
+  --theme-select-border-color: #dbdcdc;
+  --theme-setting-form-background: #ffffff;
+  --theme-select-dropdown-icon: #dbdcdc;
+  --theme-login-input-text-color: #000000;
+  --theme-tracking-model-bg: #ffffff;
+  --menu-icon-color: #000;
+}

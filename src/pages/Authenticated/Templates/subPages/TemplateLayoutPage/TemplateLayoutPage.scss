@@ -1,0 +1,16 @@
+.TemplateLayoutPage {
+  .ant-col {
+    text-align: center;
+  }
+  p {
+    color: var(--theme-login-input-text-color);
+  }
+  .cls-layout {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  height: 100%;
+}
+.TrackingModal .ant-modal-content {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.editor-container {
+  * {
+    padding: revert;
+  }
+}

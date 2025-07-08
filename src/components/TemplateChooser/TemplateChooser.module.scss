@@ -1,0 +1,24 @@
+.container {
+  background-color: var(--theme-upload-attachment);
+  height: 274px;
+  padding: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  h3 {
+    color: var(--theme-login-input-text-color);
+  }
+  .row {
+    height: 100% !important;
+    text-align: center;
+  }
+  .icon {
+    padding-bottom: 16px;
+  }
+  .subtitle {
+    padding-top: 8px;
+    .span {
+      font-size: 14px;
+    }
+  }
+}

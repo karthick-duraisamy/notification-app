@@ -1,0 +1,113 @@
+.cls-html-editor {
+  margin: 20px auto;
+  h3 {
+    color: #fff;
+    background-color: #8b8274;
+    padding: 15px 5px;
+    text-align: left;
+  }
+  textarea {
+    height: 450px;
+    overflow-y: auto;
+  }
+}
+.cls-json-editor {
+  textarea.jsoneditor-text {
+    min-height: 410px;
+  }
+}
+.cls-variable-items {
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  height: 460px;
+  scrollbar-width: none;
+  overflow-y: auto;
+  h3 {
+    margin-left: 8px 5px;
+  }
+  input {
+    margin-bottom: 8px;
+    margin-left: 5px;
+    width: 90%;
+  }
+  span {
+    margin: 2px 5px;
+  }
+}
+.cls-editor-content {
+  textarea {
+    min-height: 250px !important;
+  }
+}
+.ant-input[type='color'] {
+  height: 25px;
+  width: 28px;
+  padding: 0px;
+}
+.cls-preview-option {
+  border-radius: 10px;
+  margin: 20px auto;
+  .cls-edit-content {
+    padding: 15px;
+    text-align: left;
+    h4 {
+      text-align: right;
+    }
+  }
+  #cls-content-editor {
+    min-height: 350px !important;
+    overflow-y: auto;
+  }
+}
+.cls-html-preview {
+  background-color: #8b8274;
+  text-align: center;
+  .ant-col-4 {
+    padding: 15px;
+    .ant-btn {
+      background-color: orange;
+      color: #fff;
+      border: 1px solid orange;
+    }
+    .ant-select {
+      .ant-select-selection-search,
+      .ant-select-selector {
+        background-color: orange;
+        color: #fff;
+        border: 1px solid orange;
+      }
+      .ant-select-arrow {
+        color: #fff;
+      }
+    }
+  }
+  .cls-content-editable {
+    margin: 15px 0px;
+    h4 {
+      color: #fff;
+    }
+    .ant-switch-handle {
+      color: orange;
+    }
+    .ant-switch-inner {
+      color: orange;
+    }
+  }
+}
+.cls-ugi-colorpicker {
+  height: 27px !important;
+  width: 29px !important;
+  padding: 0px;
+  .ant-input-prefix {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  input {
+    opacity: 0;
+  }
+}
+.cls-html {
+  margin: 0px !important;
+}

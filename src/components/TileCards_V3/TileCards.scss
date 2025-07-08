@@ -1,0 +1,324 @@
+.ant-card {
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateX(1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .ant-card-body {
+    padding: 0px;
+    min-height: 95px;
+
+    .cls-tile-head {
+      border-radius: 10px 10px 0px 0px;
+      padding: 10px 10px 0px 10px;
+
+      .cls-tile-title {
+        align-items: center;
+
+        .cls-title-btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 30px;
+
+          .cls-title {
+            font-weight: bold;
+            color: #8c8d8e;
+            font-size: 12px;
+          }
+
+          button {
+            gap: 0px;
+            padding: 2px;
+            font-size: 10px;
+            color: var(--sub-title-color);
+            background-color: var(--secondary-bg);
+            height: 18px;
+            border-radius: 4px;
+            font-weight: bold;
+
+            .anticon-arrow-up {
+              transform: rotate(40deg);
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cls-date-icon {
+  padding-left: 10px;
+  margin-bottom: 5px;
+
+  .cls-total-count {
+    font-size: 12px;
+    font-weight: bold;
+
+    h2 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .cls-percentage-filter {
+    align-content: center;
+
+    .cls-percentage {
+      font-size: 10px;
+      background-color: var(--secondary-bg);
+      padding: 0px 5px;
+      border-radius: 5px;
+      font-weight: 600;
+      align-content: center;
+      height: 16px;
+
+      .anticon {
+        margin-right: 2px;
+      }
+    }
+
+    .cls-filtered-date {
+      font-size: 12px;
+      margin-left: 5px;
+      color: var(--form-icon-color);
+    }
+  }
+}
+
+.cls-icons {
+  align-content: end;
+  margin: 0px 10px 5px 0px;
+
+  .cls-title-icons {
+    height: 40px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 18px;
+    background-color: var(--btn-background);
+    color: var(--title-color);
+  }
+}
+
+.cls-info-tooltip {
+  .ant-tooltip-content {
+    .ant-tooltip-arrow {
+      display: none !important;
+    }
+  }
+}
+
+.cls-card-design {
+  .ant-card {
+    &.selected-tile-card {
+      position: relative;
+      z-index: 1;
+      border-radius: 12px;
+      border: 2px solid transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        z-index: -1;
+        border-radius: 14px;
+        background-size: 300% 300%;
+        animation: rotateGlow 5s linear infinite;
+        filter: blur(6px);
+        padding: 3px;
+      }
+    }
+
+    --sec-logo-color: white;
+    --logo-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+
+    .ant-card-body {
+      .cls-groups-header {
+        background: var(--group-tile-color);
+
+        button {
+          color: red;
+        }
+      }
+
+      .cls-contacts-header {
+        background: var(--contact-tile-color);
+      }
+
+      .cls-segments-header {
+        background: var(--segment-tile-color);
+      }
+
+      .cls-campaigns-header {
+        background: var(--campaign-tile-color);
+      }
+
+      .cls-title-heading {
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+        color: var(--secondary-text);
+
+        div {
+          margin-right: 5px;
+        }
+
+        span {
+          color: var(--secondary-text);
+        }
+
+        .cls-contacts-icon,
+        .cls-groups-icon,
+        .anticon {
+          height: 20px;
+          width: 20px;
+          margin-right: 5px;
+        }
+
+        .anticon-filter {
+          font-size: 20px;
+        }
+      }
+
+      .cls-icons {
+        align-content: end;
+        margin: 0;
+        justify-items: end;
+
+        span {
+          font-size: 28px;
+          line-height: 1;
+        }
+      }
+
+      .cls-card-dtl-container {
+        display: flex;
+        justify-content: space-between;
+
+        .cls-count {
+          span {
+            font-size: 36px;
+            color: var(--group-tile-color);
+          }
+        }
+
+        .cls-percentage {
+          font-size: 16px;
+          color: var(--footer-gray-color);
+          padding-left: 2px;
+          margin-top: 2px 8px 0px 0px;
+          position: relative;
+          top: 5px;
+          text-align: center;
+        }
+
+        .cls-filtered-date {
+          font-size: 10px;
+          margin: 7px 0px 0px 5px;
+          color: var(--group-tile-color);
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+
+      .cls-total-count {
+        .cls-card-count {
+          font-size: 12px;
+          font-family: var(--font-title);
+          font-weight: 400;
+          padding-top: 5px;
+
+          .cls-count {
+            font-size: 36px;
+          }
+        }
+
+        .cls-title {
+          font-family: var(--font-bold);
+        }
+      }
+
+      .cls-date-icon {
+        padding: 10px 0 0 0;
+        margin: unset;
+      }
+
+      .cls-tile-head {
+        padding: unset;
+
+        .cls-tile-title {
+          border-radius: 6px;
+          .cls-title-btn {
+            button {
+              margin-right: 10px;
+              background: #ffffff26;
+              padding: 3px 5px;
+              color: white;
+              border-radius: 3px;
+              border: unset;
+              box-shadow: unset;
+              font-family: var(--font-bold);
+
+              .cls-right-arrow-icon {
+                height: fit-content;
+                margin: auto 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .cls-title-btn {
+        .cls-title-icons {
+          display: flex;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            font-size: 20px;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .cls-bar-chart {
+      .cls-bar-styles {
+        display: 'inline-block';
+        width: 35;
+
+        margin-right: 3;
+        background: '#B0B0B0';
+        vertical-align: 'bottom';
+      }
+    }
+  }
+}
+
+@keyframes rotateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

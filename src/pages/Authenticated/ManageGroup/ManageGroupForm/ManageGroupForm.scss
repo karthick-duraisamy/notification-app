@@ -1,0 +1,204 @@
+.cls-manage-group-form {
+  .cls-fields-container {
+    padding: 24px 24px;
+    border: 1px dashed #555555;
+    background: var(--theme-setting-from-container);
+    border-radius: 6px;
+
+    .group-label {
+      display: block;
+      margin-bottom: 18px;
+    }
+  }
+
+  .title {
+    margin-bottom: 0px;
+  }
+
+  .cls-contact-fields-row-border {
+    border: 1px dashed var(--theme-template-folder);
+    padding: 15px;
+
+    .cls-contact-fields-scroll {
+      overflow-x: auto;
+    }
+
+    .cls-contact-fields-scroll::-webkit-scrollbar {
+      height: 2px;
+    }
+  }
+
+  .cls-contact-row {
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .contact-fields {
+      margin-bottom: 0px !important;
+    }
+  }
+
+
+  .cls-required-star {
+    margin-right: 4px;
+    color: var(--in-active);
+    font-size: 14px;
+  }
+
+  .cls-delete-row-btn {
+    position: relative;
+    top: 45px;
+    margin-bottom: 10px;
+    padding: 60px 0px 0px 0px;
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .cls-add-row-btn {
+    color: #0075cb;
+    padding-left: 0;
+    margin-top: 8px;
+    font-weight: 500;
+    float: right;
+  }
+
+  .cls-import-file-container {
+    background: white;
+    border-radius: 0px 0px 15px 15px;
+
+    .cls-file-upload-container {
+      height: 155px;
+      margin: 30px;
+      width: 100%;
+      background: #f1f1f1;
+      border-radius: 10px;
+
+      .ant-upload-drag {
+        background-color: transparent;
+        border: 2px dashed #1890ff;
+        border-radius: 8px;
+        text-align: center;
+
+        .ant-upload-btn {
+          padding: 0px;
+        }
+
+        &:hover {
+          border-color: #40a9ff;
+        }
+      }
+
+      .ant-upload-drag-icon {
+        margin-bottom: 8px;
+
+        .anticon {
+          color: #1890ff;
+          font-size: 48px;
+        }
+      }
+
+      .cls-upload-text {
+        font-size: 16px;
+        color: #7480a2;
+        margin-bottom: 8px;
+      }
+
+      .cls-upload-hint {
+        font-size: 14px;
+        color: #7480a2;
+        margin-bottom: 16px;
+      }
+
+      .cls-download-sample {
+        font-size: 14px;
+        margin: 0;
+        color: #7480a2;
+        cursor: default;
+
+        a {
+          color: #1890ff;
+          text-decoration: underline;
+          margin-left: 10px;
+
+          &:hover {
+            color: #40a9ff;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-radio-wrapper {
+    color: var(--theme-login-input-text-color);
+    margin-right: 24px;
+  }
+
+  .ant-form-item-label>label {
+    color: var(--theme-login-input-text-color);
+  }
+
+  .cls-form-btns {
+    margin-top: 32px;
+
+    .cls-reset-btn {
+      margin-right: 16px;
+    }
+  }
+
+  // Override ant design styles
+  .ant-input {
+    border-radius: 4px;
+    height: 40px;
+  }
+
+  .ant-btn-primary {
+    background-color: #fd9646;
+    border-color: #fd9646;
+
+    &:hover,
+    &:focus {
+      background-color: #ff8a2c;
+      border-color: #ff8a2c;
+    }
+  }
+}
+.cls-manage-form-container {
+  .dynamic-form {
+    .title {
+      font-size: 20px !important;
+    }
+  }  
+}
+
+.cls-modal-section {
+  width: 600px !important;
+  height: 320px !important;
+  overflow-y: auto;
+}
+
+.cls-modal-section {
+  .ant-modal-content {
+    border-radius: 8px;
+
+    .ant-modal-body {
+      padding-bottom: 5px;
+      padding-top: 15px;
+
+      .ant-modal-close {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+
+        .ant-modal-close-x {
+          line-height: 22px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}

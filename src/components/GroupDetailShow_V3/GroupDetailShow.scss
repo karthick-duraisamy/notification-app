@@ -1,0 +1,248 @@
+.cls-group-contact-details {
+  margin: 0px auto;
+  border-bottom: 1px solid var(--theme-select-border-color);
+  padding-bottom: 10px;
+
+  .ant-col-24 {
+    h1 {
+      font-size: 20px;
+    }
+
+    background-color: #fff;
+    border-radius: 10px !important;
+
+    .cls-contact-info {
+      p {
+        margin: 0px;
+        color: #4b5563;
+      }
+
+      .cls-contact-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1f2937;
+      }
+    }
+  }
+
+  .ant-col-2 {
+    margin: auto;
+  }
+}
+
+.cls-group-info {
+  background-color: var(--background);
+  // border: 1px dashed var(--summary-details);
+  border-radius: 5px;
+  padding: 0px;
+  margin: 0px 0px;
+
+  .cls-justify-between {
+    .ant-btn-default {
+      margin-right: 10px;
+      color: var(--primary-text);
+      font-size: 12px;
+      &:hover {
+        color: var(--sub-title-color) !important;
+        border-color: var(--sub-title-color) !important;
+      }
+    }
+    .cls-delete-button {
+      color: var(--btn-primary-color);
+      &:hover {
+        color: var(--btn-primary-hover-color) !important;
+        border-color: var(--btn-primary-hover-color) !important;
+      }
+    }
+  }
+  .cls-tag {
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--background);
+    background: var(--sub-title-color);
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  h3 {
+    padding: 5px 0px;
+  }
+  .cls-group-info-row {
+    padding: 10px 0px;
+    .ant-col {
+      font-size: 12px;
+      color: var(--theme-template-folder);
+    }
+    .ant-col:first-child {
+      margin-right: 10px;
+    }
+  }
+  p {
+    margin: 0px;
+  }
+
+  p {
+    span:first-child {
+      font-size: 18px;
+      color: var(--whatsapp);
+    }
+  }
+
+  p {
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .ant-col-1 {
+    margin: auto;
+    color: var(--whatsapp);
+    cursor: pointer;
+  }
+
+  .anticon-delete {
+    color: var(--btn-primary-color);
+    cursor: pointer;
+  }
+
+  .ant-btn-link {
+    color: var(--btn-primary-color);
+    cursor: pointer;
+  }
+
+  .cls-upload-history-btn {
+    color: var(--btn-primary-color);
+  }
+}
+
+.cls-align-center {
+  text-align: center;
+}
+
+.cls-active-section {
+  .ant-typography {
+    color: var(--ant-primary-color) !important;
+  }
+}
+
+.cls-row-section {
+  margin-top: 15px;
+
+  .cls-link {
+    cursor: pointer;
+    font-size: 18px !important;
+    border: 1px solid var(--theme-select-border-color);
+    border-radius: 5px;
+    float: right;
+    text-align: center;
+
+    span {
+      padding-right: 5px;
+    }
+  }
+}
+
+.cls-count-section {
+  padding: 10px 0px;
+
+  .ant-col {
+    border: 2px solid #dbdcdc1c;
+    border-radius: 5px;
+    height: 156px;
+    width: 156px;
+
+    p {
+      margin: 15px 0px 0px 0px;
+    }
+  }
+  .cls-align-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+
+    p {
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 26px;
+    }
+  }
+
+  .cls-total-count {
+    text-align: center;
+    color: #1f2937;
+    background-color: #f3f4f6;
+
+    &:hover {
+      background-color: #d5e3ff;
+    }
+  }
+
+  .cls-newContact {
+    text-align: center;
+    color: #16a34a;
+    background-color: #eff9f3;
+
+    &:hover {
+      background-color: #dcf1e4;
+    }
+
+    h3 {
+      color: #15803d;
+    }
+  }
+
+  .cls-duplicate-contact {
+    text-align: center;
+    background-color: #dbeafe;
+    color: #2563eb;
+
+    &:hover {
+      background-color: #c6defd;
+    }
+
+    h3 {
+      color: #1d4ed8;
+    }
+  }
+
+  .cls-invalid-contact {
+    text-align: center;
+    background-color: #ff6b6b1a;
+    color: #ff6b6b1a;
+
+    &:hover {
+      background-color: #fff9b5;
+    }
+
+    h3 {
+      color: #ff6b6b1a;
+    }
+  }
+
+  .cls-selection {
+    text-align: center;
+    background-color: #ff6b6b1a;
+    color: #8a0000;
+    cursor: pointer;
+    padding: 5px 0px;
+
+    &:hover {
+      background-color: #ff6b6b1a;
+    }
+
+    h3 {
+      color: #8a0000;
+    }
+  }
+}
+
+.ant-tooltip-inner {
+  color: var(--primary-text) !important;
+  background-color: var(--background);
+}
+
+.cls-divider {
+  border-bottom: 1px solid #eff1f1;
+  margin-top: 15px;
+}

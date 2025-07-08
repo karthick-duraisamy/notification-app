@@ -1,0 +1,47 @@
+/* Title styling */
+.modal-title {
+  color: var(--ai-theme-bg-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Label styling */
+.input-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Text area styling */
+.custom-textarea {
+  border: 1px solid var(--ai-theme-bg-color) !important;
+  border-radius: 6px;
+}
+
+/* Button styling */
+.generate-button {
+  width: 100%;
+  background-color: var(--ai-theme-bg-color) !important;
+  border-color: var(--ai-theme-bg-color) !important;
+  margin-top: 20px;
+}
+
+/* Optional: Remove default modal shadow if you want */
+.ai-subject-line-modal .ant-modal-content {
+  border-radius: 10px;
+}
+
+.cls-suggestions-container {
+  margin: 10px 0px ;
+
+  .cls-suggestion-item {
+    border: 1px solid var(--form-header-color1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+
+    &:hover{
+      box-shadow: 0px 1px 0px 1px var(--footer-gray-color);
+    }
+  }
+}

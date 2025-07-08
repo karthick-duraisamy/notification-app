@@ -1,0 +1,301 @@
+.SavedTemplatePage {
+  position: relative;
+
+  .delete-template {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .template-check {
+    height: 16px;
+    width: 16px;
+  }
+
+  .ant-input-affix-wrapper {
+    border: 1px solid var(--theme-select-border-color);
+    background-color: var(--theme-header-background);
+
+    .ant-input {
+      color: var(--theme-login-input-text-color);
+      background-color: var(--theme-header-background);
+    }
+
+    .ant-input-suffix {
+      span {
+        svg path {
+          fill: var(--theme-select-dropdown-icon);
+        }
+      }
+    }
+  }
+}
+
+.ant-pagination-options {
+  display: none;
+}
+
+/* azeez - common style for folder, thumbanil card*/
+.FolderViewCard,
+.ThumbnailViewCard {
+  background: var(--theme-header-background);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.25rem 1rem;
+
+  .flex-container {
+    button {
+      svg path {
+        fill: var(--theme-login-input-text-color);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 5px 0px #ccc;
+  }
+
+  .thumb-icon {
+    color: #aaaec6;
+    font-size: 60px;
+  }
+
+  .thumb-input input {
+    border-radius: 1rem;
+  }
+
+  .ant-input-group-addon {
+    padding: 0;
+  }
+
+  .ant-input-group-addon,
+  .cls-submit {
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &.add-folder {
+    background: var(--theme-header-background);
+    color: var(--theme-login-input-text-color);
+    border: 1px solid var(--theme-select-border-color);
+
+    span {
+      svg {
+        circle {
+          stroke: var(--theme-landing-logo-text);
+        }
+
+        path {
+          fill: var(--theme-landing-logo-text);
+        }
+      }
+    }
+  }
+
+  .icon-and-action {
+    display: flex;
+    justify-content: space-between;
+
+    .ant-btn {
+      padding: 0 6px 3px !important;
+      border-radius: 50%;
+
+      &:hover {
+        box-shadow: 0px 1px 4px #0000002e;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px), (min-width: 481px) and (max-width: 767px) {
+  .FolderViewCard,
+  .ThumbnailViewCard {
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+
+  .add-folder {
+    background: var(--theme-home-layout-background) !important;
+    border: 0px !important;
+    display: flex;
+    justify-content: flex-end !important;
+    padding: 8px 0px 0px 0px;
+
+    .text-ellipsis {
+      display: none;
+    }
+
+    .cls-add-icon {
+      margin-top: 0px;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .anticon-folder-open {
+      margin-top: 0;
+      padding-right: 10px;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .cls-add-newfolder {
+      display: flex;
+      border: 1px solid var(--theme-select-border-color);
+      padding: 15px 15px 0px 15px;
+      border-radius: 10px;
+    }
+  }
+
+  .cls-templates {
+    row-gap: 20px !important;
+  }
+
+  .FolderViewCard .ant-input-group-addon {
+    .anticon .anticon-close {
+      svg {
+        width: 10px;
+      }
+    }
+  }
+
+  .SavedTemplatePage {
+    .delete-template {
+      margin-top: 10px;
+    }
+
+    .ant-space-align-center {
+      gap: 0 !important;
+    }
+
+    .ant-space .ant-input-affix-wrapper {
+      position: absolute !important;
+      top: 1px !important;
+      width: 150px;
+    }
+
+    .cls-folders {
+      min-width: unset !important;
+      margin-right: 10px;
+      margin-top: 45px !important;
+
+      .ant-select-selector {
+        width: 140px !important;
+      }
+    }
+
+    .cls-select-option {
+      margin-top: 42px !important;
+    }
+
+    .no-selection .cls-folders {
+      margin: 0px !important;
+    }
+
+    .cls-template-select {
+      font-size: 13px;
+    }
+
+    .flex-container {
+      .valign-center {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .ListView {
+      //table
+      .cls-list-templatename,
+      .cls-list-upadate,
+      .cls-list-statusname {
+        display: none;
+      }
+
+      .ant-table-cell {
+        font-size: 12px;
+      }
+
+      .cls-list-foldername {
+        font-size: 11px;
+        width: 45%;
+      }
+
+      .cls-list-id {
+        width: 15%;
+      }
+
+      .ant-space .ant-space-item:nth-child(1) {
+        display: contents;
+      }
+    }
+
+    .cls-saved-pagination {
+      margin-left: 0px;
+    }
+
+    .ant-pagination-item {
+      display: inline-block !important;
+      min-width: 25px !important;
+      height: 27px !important;
+    }
+  }
+
+  .delete-template {
+    .ant-select-single {
+      min-width: 140px !important;
+    }
+  }
+
+  .Templates {
+    .ant-tabs-nav-more {
+      margin-left: 0px !important;
+    }
+
+    .ant-tabs-tab-btn {
+      font-size: 13px !important;
+    }
+  }
+
+  .GridViewCard {
+    .ant-space .ant-space-item:nth-child(1) {
+      position: unset !important;
+      width: unset;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .cls-list-statusname {
+    display: block !important;
+
+    .ant-space {
+      margin-top: 8px;
+    }
+  }
+
+  .cls-list-foldername {
+    width: 30% !important;
+  }
+
+  .cls-list-foldername {
+    font-size: 11px;
+    width: 30% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .SavedTemplatePage {
+    .cls-list-upadate,
+    .cls-list-foldername {
+      display: none;
+    }
+  }
+}

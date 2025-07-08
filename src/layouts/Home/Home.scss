@@ -1,0 +1,125 @@
+.Home {
+  .ant-layout-has-sider {
+    height: calc(100vh - 126px);
+  }
+  .layout {
+    padding: 8px 25px 8px 25px;
+    background: var(--theme-home-layout-background);
+    overflow-y: auto;
+    min-height: calc(100vh - 173px);
+  }
+
+  // .content {
+  //   padding: 0;
+  //   margin: 0;
+  //   min-height: 280;
+  // }
+  .content {
+    padding: 0;
+    margin: 0;
+    .Dashboard,
+    .Templates {
+      width: 99%;
+    }
+  }
+}
+.ant-layout-has-sider {
+  .layout {
+    min-height: calc(100vh - 126px);
+  }
+}
+// Smaller screen resolution (width ≤ 1360px AND height ≤ 700px)
+@media (max-height: 700px) {
+  .Home {
+    .ant-layout-header {
+      position: sticky;
+      top: 0;
+      z-index: 52;
+    }
+    .ant-layout-has-sider {
+      height: auto !important; // Auto set the whole page scroll
+    }
+    .Footer_footer__gguNf {
+      position: sticky;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .Home {
+    .layout {
+      padding: 20px 10px;
+    }
+  }
+
+  .HeaderItems {
+    .language {
+      margin: 5px 0px 0px 0px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px), (min-width: 481px) and (max-width: 767px) {
+  .cls-circle,
+  .cls-closeicon > .ant-dropdown-menu-title-content {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 47px;
+  }
+
+  .cls-closeicon > .ant-dropdown-menu-title-content {
+    padding-right: 0px;
+  }
+
+  .ant-dropdown-trigger {
+    border: 0px !important;
+    padding-top: 12px;
+  }
+
+  .ant-dropdown {
+    right: 3% !important;
+    width: 200px !important;
+    left: unset !important;
+  }
+
+  .ant-dropdown-menu {
+    border-radius: 10px;
+  }
+
+  .ant-breadcrumb {
+    padding: 0px 0px 15px 5px;
+  }
+
+  .ant-avatar-string {
+    font-size: 20px;
+  }
+
+  .ant-avatar-circle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .ant-dropdown-menu-item {
+    padding: 10px 5px 0px 0px;
+  }
+
+  .ant-dropdown-menu-item.ant-dropdown-menu-item-active {
+    background: #fff;
+  }
+}
+
+// @media (min-width:481px) and (max-width:767px) {
+//   .ant-dropdown {
+//     width: 50%;
+//     left: 25% !important;
+//   }
+// }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ant-breadcrumb {
+    position: absolute;
+    top: 8%;
+  }
+}

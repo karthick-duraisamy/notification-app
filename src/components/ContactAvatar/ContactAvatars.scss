@@ -1,0 +1,43 @@
+.contact-avatars-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+
+  .custom-avatar {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--background);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .anticon {
+      color: var(--background);
+      font-size: 14px;
+    }
+
+    &.remainder {
+      background: #f0f2f5;
+      color: #666;
+      font-size: 12px;
+      font-weight: 600;
+      
+      &:hover {
+        background: var(--background);
+      }
+    }
+  }
+  .overlay-icon
+  {
+    position: relative;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    color: var(--btn-primary-color);
+  }
+}

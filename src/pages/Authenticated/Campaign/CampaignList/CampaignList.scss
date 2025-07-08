@@ -1,0 +1,49 @@
+.cls-campaign {
+  .ant-col-4 {
+    margin: auto;
+  }
+
+  .cls-select-option {
+    margin-left: 20px;
+  }
+
+  .cls-campaign-table {
+    .ant-table-tbody {
+      .ant-table-cell {
+        padding: 8px 15px !important;
+
+        .cls-group-name {
+          cursor: pointer;
+          color: #3a86ff;
+          font-weight: bold;
+        }
+      }
+
+      .cls-multiple-item {
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.cls-percentage-type {
+  .ant-radio-button-wrapper {
+    color: #8187ad;
+    padding: 0 10px;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+
+    &:first-child {
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  .ant-radio-button-wrapper-checked,
+  .ant-radio-button-wrapper:hover {
+    color: var(--secondary-text);
+    background: var(--hover-bg);
+    border-color: var(--hover-bg);
+  }
+}

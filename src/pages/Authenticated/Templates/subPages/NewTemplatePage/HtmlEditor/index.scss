@@ -1,0 +1,36 @@
+.cls-template-sub-page {
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--theme-login-input-text-color);
+}
+.cls-template-html-editor {
+  background-color: var(--theme-header-background);
+  min-height: 600px;
+  padding: 24px 32px;
+  color: var(--theme-login-input-text-color);
+  input {
+    background-color: var(--theme-import-template-bg-color);
+    color: var(--theme-login-input-text-color);
+  }
+}
+.cls-tamplate-editor-toolbar {
+  .ck-editor {
+    .ck-toolbar {
+      background-color: var(--theme-import-template-bg-color) !important;
+    }
+    .ck-toolbar__items {
+      button {
+        background-color: var(--theme-import-template-bg-color) !important;
+        color: var(--theme-login-input-text-color) !important;
+      }
+      background-color: var(--theme-import-template-bg-color) !important;
+      color: var(--theme-login-input-text-color) !important;
+    }
+    .ck-editor__main {
+      .ck-content {
+        background-color: var(--theme-import-template-bg-color) !important;
+        color: var(--theme-login-input-text-color) !important;
+      }
+    }
+  }
+}

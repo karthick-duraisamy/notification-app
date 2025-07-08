@@ -1,0 +1,430 @@
+@use './font.scss';
+@use './theme.scss';
+@use './primary_v2.scss';
+
+/* reset default styles starts */
+* {
+  margin: 0;
+  padding: 0;
+  // border: 0;
+  box-sizing: border-box;
+  // font-size: 100%;
+  // font: inherit;
+  // vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-regular), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ant-popover {
+  .ant-popover-inner {
+    padding: unset !important;
+    border-radius: unset;
+  }
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: var(--font-bold);
+//   font-weight: normal;
+// }
+// ul,
+// ol {
+//   list-style: none;
+// }
+button {
+  cursor: pointer;
+  background: initial;
+}
+
+/* reset default styles ends */
+.fs-12 {
+  font-size: 12px;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.f-sbold {
+  font-family: var(--font-semibold);
+}
+/* most used utility classes
+ * (add common repeated class here )
+ */
+// p - padding, pt- padding top
+.px-2,
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pl-3 {
+  padding-left: 1rem;
+}
+.px-2,
+.pr-2 {
+  padding-right: 0.5rem;
+}
+.pr-3 {
+  padding-right: 1rem;
+}
+.pr-3 {
+  padding-right: 1rem;
+}
+.pt-4 {
+  padding-top: 1.5rem;
+}
+.pb-3 {
+  padding-bottom: 1rem;
+}
+// margin
+.ml-2,
+.mx-2 {
+  margin-left: 0.5rem;
+}
+.ml-3 {
+  margin-left: 1rem;
+}
+.ml-5,
+.mx-5 {
+  margin-left: 3rem;
+}
+.mr-5,
+.mx-5 {
+  margin-right: 3rem;
+}
+.mr-2,
+.mx-2 {
+  margin-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 0.5rem;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-1,
+.my-1 {
+  margin-bottom: 0.25rem;
+}
+.mt-1,
+.my-1 {
+  margin-top: 0.25rem;
+}
+.mt-2,
+.my-2 {
+  margin-top: 0.5rem;
+}
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem;
+}
+.mt-3,
+.my-3 {
+  margin-top: 1rem;
+}
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem;
+}
+.mb-4,
+.my-4 {
+  margin-bottom: 1.5rem;
+}
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+// display properties
+.d-block {
+  display: block;
+}
+.d-iblock {
+  display: inline-block;
+}
+.d-flex,
+.flex-container {
+  display: flex;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+// override ant tooltip text color
+.ant-tooltip-inner {
+  color: inherit;
+}
+// to align content with space in a a row
+.flex-container {
+  justify-content: space-between;
+}
+.flex-container,
+.valign-center {
+  align-items: center;
+}
+
+// standard rounded corner
+.rounded {
+  border-radius: 4px;
+}
+// side nav menu
+.ant-menu,
+.ant-menu.ant-menu-dark {
+  background: var(--theme-menu-bg-color);
+}
+// primary text (black for white light theme)
+.ant-tabs,
+.ant-breadcrumb-separator,
+.ant-breadcrumb > span:last-child,
+.ant-breadcrumb > span,
+.ant-breadcrumb > span a {
+  color: var(--primary-text);
+}
+// secondary text (black for white light theme)
+.ant-btn-primary {
+  color: var(--secondary-text);
+  background-color: var(--ant-primary-color);
+  &::before {
+    background-color: var(--ant-primary-color) !important;
+  }
+}
+// fixing ant styles
+// .ant-layout-sider-children {
+//   height: auto;
+// }
+// to remove existing ant radio button styles
+.custom-radio,
+.view-switch {
+  .ant-radio-button-wrapper {
+    &::before {
+      display: none;
+    }
+    border: 0;
+    height: auto;
+    box-shadow: none !important;
+  }
+}
+.custom-radio .ant-radio-button-wrapper {
+  padding: 0;
+}
+// Custom tooltip with menu
+.CustomTooltipMenu {
+  .ant-tooltip-inner {
+    padding: 0;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  a,
+  button {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    &:hover {
+      color: var(--hover-color);
+      background: var(--hover-bg);
+    }
+  }
+}
+
+// ant tab colors override
+.ant-tabs-tab.ant-tabs-tab-active {
+  .ant-tabs-tab-btn {
+    color: var(--primary-text);
+    text-shadow: none;
+  }
+}
+.ant-tabs-bottom > .ant-tabs-nav:before,
+.ant-tabs-bottom > div > .ant-tabs-nav:before,
+.ant-tabs-top > .ant-tabs-nav:before,
+.ant-tabs-top > div > .ant-tabs-nav:before,
+.border-bottom {
+  border-bottom: 1px solid var(--tab-border);
+}
+// .ant-tabs-ink-bar {
+// background: var(--tab-active-border);
+// height: 3px !important;
+// }
+
+// for status bg and color
+.status-Active,
+.status-Inactive {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    border-radius: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+  }
+}
+.status-Active {
+  color: #37c57a;
+  &::before {
+    background: #37c57a;
+    box-shadow: #37c57a4f 0px 0px 0px 3px;
+  }
+}
+.status-Inactive {
+  color: #fd4646;
+  &::before {
+    background: #fd4646;
+    box-shadow: #fd464659 0px 0px 0px 3px;
+  }
+}
+.reset-btn {
+  border: 1px solid var(--ant-primary-color);
+  color: var(--ant-primary-color);
+}
+.no-events {
+  pointer-events: none;
+}
+
+.no-selection {
+  user-select: none;
+}
+
+// ant custom pagination
+.ant-pagination-item,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-prev .ant-pagination-item-link {
+  background: none;
+  border: 0;
+}
+
+.ant-pagination-item a {
+  color: #666666;
+}
+
+.ant-pagination-item-active {
+  background: var(--ant-primary-color);
+  border-radius: 50%;
+  a {
+    color: #fff;
+  }
+}
+
+.ant-pagination-prev .anticon-left,
+.ant-pagination-next .anticon-right {
+  svg {
+    display: none;
+  }
+  height: 0;
+  width: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  vertical-align: middle;
+}
+.ant-pagination-prev .anticon-left {
+  border-right: 9px solid;
+}
+.ant-pagination-next .anticon-right {
+  border-left: 9px solid;
+}
+.hide {
+  display: none;
+}
+.custom-modal {
+  .ant-modal-content {
+    padding: unset;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 4px;
+    }
+    &::before {
+      background: var(--title-color);
+      left: 0;
+    }
+    &::after {
+      top: 0;
+      right: 0;
+      background: var(--ant-primary-color);
+    }
+    .ant-modal-body {
+      padding: 24px;
+    }
+  }
+}
+.ant-switch {
+  font-weight: 600;
+  &.ant-switch-checked {
+    background-color: var(--active);
+  }
+}
+.ant-pagination {
+  .ant-pagination-item {
+    border-radius: 50%;
+    background: none;
+    border: none;
+  }
+  .ant-pagination-item-active {
+    background: var(--ant-primary-color);
+    border-radius: 50%;
+    a {
+      color: #fff;
+    }
+  }
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      border-radius: 50%;
+      background: none;
+      border: none;
+    }
+  }
+}
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #fd9646; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e2071; /* Scroll thumb color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0e2071; /* Thumb color on hover */
+}

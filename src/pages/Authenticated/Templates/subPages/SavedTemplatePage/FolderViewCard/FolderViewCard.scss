@@ -1,0 +1,45 @@
+.FolderViewCard {
+  position: relative;
+  min-height: 140px;
+
+  button {
+    svg path {
+      fill: var(--theme-login-input-text-color);
+    }
+  }
+
+  .count {
+    color: #8e91a1;
+    font-size: 13px;
+  }
+}
+
+@media(min-width:320px) and (max-width:767px) {
+  .FolderViewCard {
+    min-height: auto;
+  }
+
+  .no-selection {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 15px 15px 10px 15px !important;
+    justify-content: space-between;
+    align-items: center;
+
+    .cls-folder {
+      display: none;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  .cls-folders {
+    margin: 0;
+  }
+
+  .cls-clone-folder {
+    display: none;
+  }
+}

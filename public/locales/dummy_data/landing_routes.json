@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/login",
+    "layout": "LandingLayout",
+    "component": "Login",
+    "default": true
+  },
+  {
+    "path": "/forgot-password",
+    "layout": "LandingLayout",
+    "component": "ForgotPassword"
+  },
+  {
+    "path": "/reset-password",
+    "layout": "LandingLayout",
+    "component": "ResetPassword"
+  }
+]

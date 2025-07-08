@@ -1,0 +1,36 @@
+@use 'sass:string';
+
+@mixin font-face($font-name, $file-name) {
+  @font-face {
+    font-family: string.quote($font-name);
+    src: url($file-name + '.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+// Default font OpenSans
+@include font-face('OpenSansBold', '../fonts/OpenSans/OpenSans-Bold');
+@include font-face('OpenSansRegular', '../fonts/OpenSans/OpenSans-Regular');
+@include font-face('OpenSansSemiBold', '../fonts/OpenSans/OpenSans-SemiBold');
+
+// Flynas custom font
+@include font-face('FlynasBold', '../fonts/Flynas_fonts/Flynas-Bold');
+@include font-face('FlynasLight', '../fonts/Flynas_fonts/Flynas-Light');
+@include font-face('FlynasRegular', '../fonts/Flynas_fonts/Flynas-Regular');
+@include font-face('FlynasSemiBold', '../fonts/Flynas_fonts/Flynas-SemiBold');
+
+// BauhausFonts font for header and Poppins fonts for content for Indigo(6E) airline
+@include font-face('BauhausFonts', '../fonts/Bauhaus_std_fonts/bauhaus_std_medium');
+@include font-face('PoppinsBold', '../fonts/Poppins_fonts/poppins_bold');
+@include font-face('PoppinsLight', '../fonts/Poppins_fonts/poppins_light');
+@include font-face('PoppinsRegular', '../fonts/Poppins_fonts/poppins_regular');
+@include font-face('PoppinsSemibold', '../fonts/Poppins_fonts/poppins_semibold');
+
+// Jotia font for header and Graphik fonts for content for Indigo(6E) airline
+@include font-face('GraphikBold', '../fonts/Graphik/graphik_bold');
+@include font-face('GraphikRegular', '../fonts/Graphik/graphik_regular');
+@include font-face('GraphikMedium', '../fonts/Graphik/graphik_medium');
+@include font-face('JotiaBold', '../fonts/Jotia/jotia_bold');
+@include font-face('JotiaRegular', '../fonts/Jotia/jotia_regular');
+@include font-face('JotiaMedium', '../fonts/Jotia/jotia_medium');

@@ -1,0 +1,59 @@
+.cls-custom-group {
+  border-radius: 10px;
+  cursor: pointer;
+  .ant-col-3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-col-15 {
+    padding-left: 15px;
+    h3 {
+      font-weight: 500;
+      margin: 0;
+      color: #0000ff;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .cls-active {
+    margin-left: 5px;
+    label {
+      color: #00d680 !important;
+    }
+  }
+  .cls-in-active {
+    margin-left: 5px;
+    label {
+      color: #f00025 !important;
+    }
+  }
+  .ant-card-body {
+    padding: 12px;
+  }
+  .ant-col-24 {
+    font-size: 11px;
+    .cls-seperator{
+      font-size: 12px;
+    }
+  }
+  .cls-row-custom {
+    margin: 5px;
+    font-size: 8px;
+  }
+  .cls-view-contact {
+    text-align: center;
+    .ant-row {
+      margin-bottom: 0px;
+      justify-content: right;
+      p {
+        font-size: 10px;
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}

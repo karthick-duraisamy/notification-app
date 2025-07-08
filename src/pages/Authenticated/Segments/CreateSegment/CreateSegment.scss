@@ -1,0 +1,31 @@
+.cls-fields-container {
+    padding: 24px 24px;
+    padding-right: 36px;
+    border: 1px dashed #555555;
+    background: #f2f5f8;
+    border-radius: 6px;
+
+    .remove-icon {
+        position: absolute;
+        right: -4px;
+        top: 10px;
+        color: red;
+    }
+    .cls-input {
+        border-radius: 5px;
+    }
+    .cls-checkbox {
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+    .cls-radio {
+        margin-top: 5px;
+    }
+
+    .ant-radio-group {
+        .ant-radio-wrapper:first-child {
+            margin-right: 50px;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.cls-contact-details {
+  margin: 20px auto;
+
+  .ant-col-24 {
+    h1 {
+      font-size: 20px;
+    }
+
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px !important;
+
+    .cls-group-info {
+      background-color: #f2f5f8;
+      border: 1px dashed #555;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+
+      p {
+        margin: 0px;
+      }
+
+      p {
+        span:first-child {
+          font-size: 18px;
+          color: #0000ff;
+        }
+
+        span:nth-of-type(2) {
+          font-size: 18px;
+        }
+
+        font-size: 14px;
+      }
+
+      .ant-col-1 {
+        margin: auto;
+        color: blue;
+        cursor: pointer;
+      }
+
+      .anticon-delete {
+        color: red;
+        cursor: pointer;
+      }
+
+      .ant-btn-link {
+        color: blue;
+        cursor: pointer;
+      }
+
+      .cls-upload-history-btn {
+        margin: 15px;
+        border-radius: 8px;
+        color: #0000ff;
+      }
+    }
+
+    .cls-contact-info {
+      background-color: #f2f5f8;
+      border: 1px dashed #555;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 30px;
+
+      .ant-col-24 {
+        background-color: #f2f5f8;
+        border: none;
+        padding: 5px;
+      }
+    }
+  }
+
+  .ant-col-2 {
+    margin: auto;
+  }
+}
+
+.cls-dynamic-form {
+  width: 900px !important;
+}

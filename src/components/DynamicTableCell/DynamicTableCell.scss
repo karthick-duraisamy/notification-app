@@ -1,0 +1,26 @@
+.cls-description-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cls-hover-actions {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--theme-header-background);
+}
+
+.cls-custom-icon {
+  padding: 4px 8px;
+  &:hover {
+    background: var(--theme-hover-background);
+  }
+}
+
+div:hover .cls-hover-actions {
+  display: flex;
+}

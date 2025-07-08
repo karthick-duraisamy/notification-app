@@ -1,0 +1,8 @@
+[
+  {
+    "path": "/noDataFound",
+    "layout": "HomeLayout",
+    "component": "noDataFound",
+    "default": true
+  }
+]
